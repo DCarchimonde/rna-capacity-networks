@@ -1,0 +1,84 @@
+{
+  "created_utc": "2026-10-10T13:36:18.372537+00:00",
+  "status": "FIXED_BEFORE_NEW_RESOLUTION_CALCULATIONS",
+  "data_status": "Both D and GSE166555 previously exposed; new graph-resolution analyses exploratory. Prior primary H replication unchanged.",
+  "genes": [
+    "ITGA5",
+    "ITGAV",
+    "ITGB1",
+    "ITGB3",
+    "ITGB6"
+  ],
+  "edges": [
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      1,
+      4
+    ]
+  ],
+  "target": "R_k = min_e A_e(k) / A_0(k); A_j(k) = fixed-type average of E_P E_M F_j(M/k), M|P~Multinomial(k,P plus remainder).",
+  "averaging": "Equal cells within each type; type-specific and 1/2 Epi + 1/2 Fibro, common edge deletion outside expectation.",
+  "resolutions_real": [
+    2,
+    8,
+    32,
+    128,
+    500
+  ],
+  "resolutions_theory": [
+    1,
+    2,
+    3,
+    4,
+    8,
+    16
+  ],
+  "minimum_UMI": 500,
+  "minimum_Epi": 100,
+  "minimum_Fibro": 30,
+  "cell_splits": 20,
+  "cell_split_seed_base": 4402000,
+  "missing_gene_policy": "Full4-edge graph unavailable for GSE166555. Common3-edge graph ab,vb,vd is a separate target, in both cohorts.",
+  "zero_denominator": "R undefined (NA); all zero flows retained.",
+  "ranking": "Strict pair direction; ties and NA count as unresolved, not correct.",
+  "simulations": {
+    "patients": 12,
+    "Epi": 200,
+    "Fibro": 100,
+    "cohort_replicates": 32,
+    "depths": [
+      64,
+      256
+    ],
+    "k": 8,
+    "families": [
+      "mean_matched_joint",
+      "second_moment_matched",
+      "identical_biology_depth_gradient"
+    ],
+    "seed_base": 2610105200,
+    "baseline": "Exact conditional hypergeometric vs 1-draw and 8-draw random rarefaction, all at same k=8. Also depth-varying plug-in described as different target.",
+    "endpoints": [
+      "flow MSE",
+      "R8 pair accuracy to known population truth",
+      "null strict-order fraction",
+      "conditional rarefaction variance"
+    ],
+    "success_claim": "Report observed effects; do not select best k or simulate toward a winning result."
+  },
+  "input_sha256": {
+    "independent_counts.npz": "25884937355803b84a282ac11510deeee6942726af8b357477d7c551c67a2ee3",
+    "development_counts.npz": "15f16a17da11a8b4d3bbc403b15fffd9cc8a51ba2e79a789ed04620be501f044"
+  }
+}

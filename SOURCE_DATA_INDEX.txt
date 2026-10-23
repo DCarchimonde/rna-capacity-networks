@@ -1,0 +1,174 @@
+SOURCE DATA INDEX
+
+D = GSE178341; I = GSE166555; Epi = epithelial; Fibro = fibroblast.
+Ratios, probabilities and rates are fractions unless a column says otherwise.
+Multiply fractions by 100 for percentages and fraction differences by 100 for
+percentage-point differences. Missing values are NA/blank. Runtime columns are
+original execution measurements and are expected to change on another machine.
+
+File names match the manuscript data/code declaration. Review_, Motif_ and
+Second_Round_ identify analysis families; each table has one current version.
+
+D_patient_H.csv (1449 rows)
+Source: analyses/strong_comparators/results/D_patient_H.csv
+Fields: cohort, patient, scope, method, target, H
+
+H_real_paired_comparison.csv (72 rows)
+Source: analyses/strong_comparators/results/real_primary_paired_comparison.csv
+Fields: cohort, scope, target, kind, comparator, patients, equal_cell_minus_comparator, patient_95_low, patient_95_high
+
+H_real_primary_summary.csv (162 rows)
+Source: analyses/strong_comparators/results/real_primary_summary.csv
+Fields: cohort, scope, target, method, kind, patients, all_pair_retention, reference_resolution, mean_finite_patients, patient_95_low, patient_95_high, full_mean_score
+
+H_simulation_paired_comparison.csv (126 rows)
+Source: analyses/strong_comparators/results/H_simulation_paired_comparison.csv
+Fields: source, family, depth_design, comparator, endpoint, equal_cell_minus_comparator, MC_95_low, MC_95_high, cohorts, equally_weighted_cases
+
+I_patient_H.csv (480 rows)
+Source: analyses/strong_comparators/results/I_patient_H.csv
+Fields: cohort, patient, scope, method, target, H
+
+Motif_competition_decomposition.csv (370 rows)
+Source: analyses/motif_extension/results/competition_decomposition.csv
+Fields: cohort, patient, cells, k, R2, R_full, R_bivariate, total_resolution_change, bivariate_resolution_change, shared_capacity_change, B_sum, A0, competition_loss, competition_fraction, competition_fraction_ci_low, competition_fraction_ci_high, competition_fraction_bootstrap_undefined, wedge_upper_bound, R_motif_bound_low, R_motif_bound_high, wedge_support_cells, panel_fraction
+
+Motif_competition_summary.csv (10 rows)
+Source: analyses/motif_extension/results/competition_summary.csv
+Fields: cohort, k, patients, cells, pairs, inversion_R2_full, inversion_R2_bivariate, inversion_bivariate_full, total_inversions_already_in_bivariate, total_inversions_requiring_shared_capacity, attribution_ties, median_competition_fraction, min_competition_fraction, max_competition_fraction, median_absolute_shared_score_change, median_absolute_bivariate_score_change, min_shared_score_change, max_shared_score_change, median_wedge_bound_width, all_decompositions_sum
+
+Motif_parity_permutation_power.csv (128 rows)
+Source: analyses/motif_extension/results/parity_permutation_power.csv
+Fields: s, L, n, k, setting, method, repetitions, permutations, rejection_rate, rejection_ci_low, rejection_ci_high, constant_statistic_cohorts, molecular_budget_per_group, true_raw_loss_difference
+
+Motif_parity_sparse_truth.csv (16 rows)
+Source: analyses/motif_extension/results/parity_sparse_truth.csv
+Fields: s, L, setting, C0, C1, R0, R1, B, truth_difference_C, truth_difference_R
+
+R8_paired_comparison.csv (16 rows)
+Source: analyses/strong_comparators/results/R8_paired_comparison.csv
+Fields: family, base_depth, endpoint, exact_minus_plugin, MC_95_low, MC_95_high
+
+R8_real_comparison.csv (9 rows)
+Source: analyses/strong_comparators/results/R8_real_comparison.csv
+Fields: cohort, graph, scope, patients, all_pairs, same_pairs, opposite_pairs, unresolved_pairs, all_pair_retention, reference_resolution, exact_split_retention, plugin_split_retention, R_mean_exact, R_mean_plugin, R_max_abs_difference
+
+R8_simulation_summary.csv (36 rows)
+Source: analyses/strong_comparators/results/R8_simulation_summary.csv
+Fields: family, base_depth, method, rep, flow_MSE_R8_target, R8_MSE, R8_pair_accuracy, split_all_pair_retention, split_reference_resolution, finite_patients, R_depth_correlation
+
+Review_MMR_fixed_model_cv.csv (42 rows)
+Source: analyses/review_completion/results/MMR_fixed_model_cv.csv
+Fields: cohort, graph, model, patients, MMRd, MMRp, loo_AUC, loo_log_loss, loo_Brier
+
+Review_MMR_incremental_comparison.csv (12 rows)
+Source: analyses/review_completion/results/MMR_incremental_comparison.csv
+Fields: cohort, graph, reduced, expanded, log_loss_difference, loss_ci_low, loss_ci_high, AUC_difference, AUC_ci_low, AUC_ci_high, interval_interpretation
+
+Review_MMR_leave_pair_out_auc.csv (7 rows)
+Source: analyses/review_completion/results/MMR_leave_pair_out_auc.csv
+Fields: model, patients, opposite_class_pairs, leave_pair_out_AUC, conditional_patient_bootstrap_low, conditional_patient_bootstrap_high
+
+Review_background_only_truth.csv (205 rows)
+Source: analyses/review_completion/results/background_only_truth.csv
+Fields: rho, k, R, A0, component_bound
+
+Review_depth_threshold_sensitivity.csv (2660 rows)
+Source: analyses/review_completion/results/depth_threshold_sensitivity.csv
+Fields: cohort, graph, patient, threshold, k, R, retained_cells, retained_fraction, median_depth
+
+Review_expanded_graph_scores.csv (930 rows)
+Source: analyses/review_completion/results/expanded_graph_scores.csv
+Fields: graph, patient, k, cells, R, A0, dominant_edge, integration_mc_se, mean_absolute_residual_bound
+
+Review_fullgraph_runtime.csv (5 rows)
+Source: analyses/review_completion/results/fullgraph_runtime.csv
+Fields: graph, k, cells, patients, batches, maximum_draws_per_batch, refined_patients, seconds, max_patient_mc_se
+
+Review_high_order_detection_power.csv (12 rows)
+Source: analyses/review_completion/results/high_order_detection_power.csv
+Fields: scale, depth, cells, k, calibration_pairs, evaluation_pairs, null_low, null_high, empirical_size, empirical_power, power_ci_low, power_ci_high, true_gap, finite_alt_fraction, normal_approx_cells_for_80_percent
+
+Review_near_tie_bias.csv (32 rows)
+Source: analyses/review_completion/results/near_tie_bias.csv
+Fields: depth, delta, cells, replicates, true_R, finite_fraction, mean_R, ratio_bias, numerator_bias_over_true_baseline, wrong_edge_fraction, edge_tie_fraction, percentile_interval_valid, percentile_interval_attempts, percentile_interval_coverage, percentile_interval_mean_width, joint_component_projection_coverage, joint_component_projection_mean_width
+
+Review_panel_conditional_selection.csv (222 rows)
+Source: analyses/review_completion/results/panel_conditional_selection.csv
+Fields: cohort, patient, panel_resolution, eligible_cells, total_cells, coverage, R, median_depth_retained, median_depth_all
+
+Review_patient_score_intervals.csv (175 rows)
+Source: analyses/review_completion/results/patient_score_intervals.csv
+Fields: cohort, patient, k, R, joint_component_95_low, joint_component_95_high, cells, bootstrap_repetitions, interval_scope
+
+Review_sparse_estimation.csv (800 rows)
+Source: analyses/review_completion/results/sparse_estimation.csv
+Fields: scale, depth, cells, k, method, population, replicates, true_R, true_difference, finite_score_fraction, ratio_bias, ratio_rmse, component_mse, mean_estimated_difference, difference_sd, true_gap_over_difference_sd, strict_direction_accuracy, direction_ci_low, direction_ci_high, finite_pair_fraction, max_plugin_component_bound
+
+Review_sparse_truth.csv (25 rows)
+Source: analyses/review_completion/results/sparse_truth.csv
+Fields: scale, k, R_A, R_B, difference, difference_lower, difference_upper, max_component_tail_bound, mean_graph_fraction
+
+Second_Round_all_deletion_components.csv (7440 rows)
+Source: analyses/second_round/results/all_deletion_components.csv
+Fields: patient, k, edge, deletion_flow, deletion_loss, normalized_loss
+
+Second_Round_paired_permutation_replicates.csv (2048 rows)
+Source: analyses/second_round/results/paired_permutation_replicates.csv
+Fields: family, setting, replicate, statistic, observed, pvalue, valid, reject
+
+Second_Round_paired_permutation_summary.csv (8 rows)
+Source: analyses/second_round/results/paired_permutation_summary.csv
+Fields: family, setting, statistic, rejections, repetitions, rejection_rate, ci_low, ci_high, undefined_tests, permutations
+
+Second_Round_population_truth.csv (16 rows)
+Source: analyses/second_round/results/population_truth.csv
+Fields: family, group, k, D, R, A, B
+
+Second_Round_worst_deletion_by_patient.csv (310 rows)
+Source: analyses/second_round/results/worst_deletion_by_patient.csv
+Fields: patient, k, cells, A0, R, worst_edge, second_edge, tied_worst_edges, number_tied, normalized_margin
+
+Second_Round_worst_deletion_counts.csv (15 rows)
+Source: analyses/second_round/results/worst_deletion_counts.csv
+Fields: k, worst_edge, patients
+
+Second_Round_worst_deletion_switches.csv (2 rows)
+Source: analyses/second_round/results/worst_deletion_switches.csv
+Fields: patient, edge_k2, edge_k8, edge_k32, edge_k128, edge_k500
+
+graph_simulation_summary.csv (30 rows)
+Source: analyses/molecular_resolution/results/simulation_summary.csv
+Fields: family, base_depth, method, flow_MSE_R8_target, R8_MSE, R8_pair_accuracy, split_all_pair_retention, split_reference_resolution, finite_patients, R_depth_correlation
+
+independent_H_coupling.csv (12 rows)
+Source: analyses/independent_pair/results/independent/coupling_summary.csv
+Fields: scope, edge, patients, status, mean_H, mean_U, H_to_U_ratio_of_means, mean_H_minus_U, patient_95_low, patient_95_high, positive_patients, zero_H_patients
+
+independent_H_retention.csv (36 rows)
+Source: analyses/independent_pair/results/independent/split_summary.csv
+Fields: scope, method, edge, patients, bootstrap_valid, status, D, all_pair_retention, reference_resolution, strict_accuracy, all_pair_retention_patient_95_low, all_pair_retention_patient_95_high, reference_resolution_patient_95_low, reference_resolution_patient_95_high
+
+independent_count_layer_audit.csv (72 rows)
+Source: analyses/independent_pair/results/count_layer_audit.csv
+Fields: file, layer_candidate, matrix_cells, matrix_gene_rows, available_matched_cells, exact_matches, exact_match_fraction, max_abs_delta, all_target_rows_present
+
+independent_specimen_selection.csv (13 rows)
+Source: analyses/independent_pair/config/selected_tumor_manifest.csv
+Fields: patient_id, sample_id, sample_accession, file_name, selected, selection_reason
+
+patient_cell_counts.csv (35 rows)
+Source: scripts/sync_tables.py, calculated from data/*_counts.npz
+Fields: cohort, patient, epithelial_cells, fibroblast_cells, epithelial_qualified, balanced_qualified
+
+patient_resolution_spectra.csv (840 rows)
+Source: analyses/molecular_resolution/results/patient_spectrum.csv
+Fields: cohort, graph, patient, scope, k, R_k, bottleneck, depth_varying_plugin_R, Epi_cells, Fibro_cells, A_0, A_ITGA5_ITGB1, A_ITGAV_ITGB1, A_ITGAV_ITGB3, A_ITGAV_ITGB6
+
+resolution_cohort_summary.csv (45 rows)
+Source: analyses/molecular_resolution/results/cohort_summary.csv
+Fields: cohort, graph, scope, k, patients, R_median, R_min, R_max, positive_baseline_patients, split_all_pair_retention, split_reference_resolution
+
+resolution_transitions.csv (99 rows)
+Source: analyses/molecular_resolution/results/resolution_transitions.csv
+Fields: cohort, graph, scope, k_from, k_to, patients, all_pairs, same_pairs, opposite_pairs, unresolved_pairs, all_pair_retention, reference_resolution, bottleneck_switch_patients

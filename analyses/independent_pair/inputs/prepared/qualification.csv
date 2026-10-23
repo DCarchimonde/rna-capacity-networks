@@ -1,0 +1,13 @@
+patient,sample,matrix_cells,matrix_genes,metadata_matched_cells,metadata_unmatched_cells,annotated_cells_missing_from_matrix,Epi_cells_UMI500,Fibro_cells_UMI500,all_target_rows_present,missing_target_genes,primary_target_rows_present,Epi_eligible,two_type_eligible
+p007,p007t,2044,21854,2044,0,0,1011,35,False,ITGB3,True,True,True
+p008,p008t,3336,21854,3336,0,0,570,238,False,ITGB3,True,True,True
+p009,p009t1,2889,21854,2889,0,0,2055,7,False,ITGB3,True,True,False
+p012,p012t,4122,21854,4122,0,0,906,45,False,ITGB3,True,True,True
+p013,p013t,3424,21854,3424,0,0,1125,47,False,ITGB3,True,True,True
+p014,p014t,3501,21854,3501,0,0,1277,123,False,ITGB3,True,True,True
+p016,p016t,2919,21854,2919,0,0,967,261,False,ITGB3,True,True,True
+p017,p017t,5532,21854,5532,0,0,1775,402,False,ITGB3,True,True,True
+p020,p020t,417,21854,417,0,0,320,0,False,ITGB3,True,True,False
+p021,p021t,1255,21854,1255,0,0,132,44,False,ITGB3,True,True,True
+p025,p025t,1117,21854,1117,0,0,414,9,False,ITGB3,True,True,False
+p026,p026t,3565,21854,3565,0,0,890,93,False,ITGB3,True,True,True

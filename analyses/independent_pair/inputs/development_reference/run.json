@@ -1,0 +1,13 @@
+{
+  "started_utc": "2026-10-09T17:05:21.028541+00:00",
+  "finished_utc": "2026-10-09T17:05:31.929913+00:00",
+  "seconds": 10.901452041001903,
+  "input_kind": "development_replay",
+  "patients_in_manifest": 23,
+  "Epi_eligible_patients": 23,
+  "two_type_eligible_patients": 23,
+  "new_independent_analysis": false,
+  "low_depth_cells_in_UMI_draws": 0,
+  "cache_sha256": "15f16a17da11a8b4d3bbc403b15fffd9cc8a51ba2e79a789ed04620be501f044",
+  "intervals": "descriptive patient percentile bootstrap; technical roles do not increase biological N"
+}

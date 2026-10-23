@@ -1,0 +1,367 @@
+{
+  "checks": 60,
+  "all_passed": true,
+  "arithmetic": "exact rational",
+  "details": [
+    {
+      "rho": "1/100",
+      "k": 2,
+      "component": 0,
+      "equal": true
+    },
+    {
+      "rho": "1/100",
+      "k": 2,
+      "component": 1,
+      "equal": true
+    },
+    {
+      "rho": "1/100",
+      "k": 2,
+      "component": 2,
+      "equal": true
+    },
+    {
+      "rho": "1/100",
+      "k": 2,
+      "component": 3,
+      "equal": true
+    },
+    {
+      "rho": "1/100",
+      "k": 2,
+      "component": 4,
+      "equal": true
+    },
+    {
+      "rho": "1/100",
+      "k": 3,
+      "component": 0,
+      "equal": true
+    },
+    {
+      "rho": "1/100",
+      "k": 3,
+      "component": 1,
+      "equal": true
+    },
+    {
+      "rho": "1/100",
+      "k": 3,
+      "component": 2,
+      "equal": true
+    },
+    {
+      "rho": "1/100",
+      "k": 3,
+      "component": 3,
+      "equal": true
+    },
+    {
+      "rho": "1/100",
+      "k": 3,
+      "component": 4,
+      "equal": true
+    },
+    {
+      "rho": "1/100",
+      "k": 4,
+      "component": 0,
+      "equal": true
+    },
+    {
+      "rho": "1/100",
+      "k": 4,
+      "component": 1,
+      "equal": true
+    },
+    {
+      "rho": "1/100",
+      "k": 4,
+      "component": 2,
+      "equal": true
+    },
+    {
+      "rho": "1/100",
+      "k": 4,
+      "component": 3,
+      "equal": true
+    },
+    {
+      "rho": "1/100",
+      "k": 4,
+      "component": 4,
+      "equal": true
+    },
+    {
+      "rho": "1/100",
+      "k": 8,
+      "component": 0,
+      "equal": true
+    },
+    {
+      "rho": "1/100",
+      "k": 8,
+      "component": 1,
+      "equal": true
+    },
+    {
+      "rho": "1/100",
+      "k": 8,
+      "component": 2,
+      "equal": true
+    },
+    {
+      "rho": "1/100",
+      "k": 8,
+      "component": 3,
+      "equal": true
+    },
+    {
+      "rho": "1/100",
+      "k": 8,
+      "component": 4,
+      "equal": true
+    },
+    {
+      "rho": "1/10",
+      "k": 2,
+      "component": 0,
+      "equal": true
+    },
+    {
+      "rho": "1/10",
+      "k": 2,
+      "component": 1,
+      "equal": true
+    },
+    {
+      "rho": "1/10",
+      "k": 2,
+      "component": 2,
+      "equal": true
+    },
+    {
+      "rho": "1/10",
+      "k": 2,
+      "component": 3,
+      "equal": true
+    },
+    {
+      "rho": "1/10",
+      "k": 2,
+      "component": 4,
+      "equal": true
+    },
+    {
+      "rho": "1/10",
+      "k": 3,
+      "component": 0,
+      "equal": true
+    },
+    {
+      "rho": "1/10",
+      "k": 3,
+      "component": 1,
+      "equal": true
+    },
+    {
+      "rho": "1/10",
+      "k": 3,
+      "component": 2,
+      "equal": true
+    },
+    {
+      "rho": "1/10",
+      "k": 3,
+      "component": 3,
+      "equal": true
+    },
+    {
+      "rho": "1/10",
+      "k": 3,
+      "component": 4,
+      "equal": true
+    },
+    {
+      "rho": "1/10",
+      "k": 4,
+      "component": 0,
+      "equal": true
+    },
+    {
+      "rho": "1/10",
+      "k": 4,
+      "component": 1,
+      "equal": true
+    },
+    {
+      "rho": "1/10",
+      "k": 4,
+      "component": 2,
+      "equal": true
+    },
+    {
+      "rho": "1/10",
+      "k": 4,
+      "component": 3,
+      "equal": true
+    },
+    {
+      "rho": "1/10",
+      "k": 4,
+      "component": 4,
+      "equal": true
+    },
+    {
+      "rho": "1/10",
+      "k": 8,
+      "component": 0,
+      "equal": true
+    },
+    {
+      "rho": "1/10",
+      "k": 8,
+      "component": 1,
+      "equal": true
+    },
+    {
+      "rho": "1/10",
+      "k": 8,
+      "component": 2,
+      "equal": true
+    },
+    {
+      "rho": "1/10",
+      "k": 8,
+      "component": 3,
+      "equal": true
+    },
+    {
+      "rho": "1/10",
+      "k": 8,
+      "component": 4,
+      "equal": true
+    },
+    {
+      "rho": "3/5",
+      "k": 2,
+      "component": 0,
+      "equal": true
+    },
+    {
+      "rho": "3/5",
+      "k": 2,
+      "component": 1,
+      "equal": true
+    },
+    {
+      "rho": "3/5",
+      "k": 2,
+      "component": 2,
+      "equal": true
+    },
+    {
+      "rho": "3/5",
+      "k": 2,
+      "component": 3,
+      "equal": true
+    },
+    {
+      "rho": "3/5",
+      "k": 2,
+      "component": 4,
+      "equal": true
+    },
+    {
+      "rho": "3/5",
+      "k": 3,
+      "component": 0,
+      "equal": true
+    },
+    {
+      "rho": "3/5",
+      "k": 3,
+      "component": 1,
+      "equal": true
+    },
+    {
+      "rho": "3/5",
+      "k": 3,
+      "component": 2,
+      "equal": true
+    },
+    {
+      "rho": "3/5",
+      "k": 3,
+      "component": 3,
+      "equal": true
+    },
+    {
+      "rho": "3/5",
+      "k": 3,
+      "component": 4,
+      "equal": true
+    },
+    {
+      "rho": "3/5",
+      "k": 4,
+      "component": 0,
+      "equal": true
+    },
+    {
+      "rho": "3/5",
+      "k": 4,
+      "component": 1,
+      "equal": true
+    },
+    {
+      "rho": "3/5",
+      "k": 4,
+      "component": 2,
+      "equal": true
+    },
+    {
+      "rho": "3/5",
+      "k": 4,
+      "component": 3,
+      "equal": true
+    },
+    {
+      "rho": "3/5",
+      "k": 4,
+      "component": 4,
+      "equal": true
+    },
+    {
+      "rho": "3/5",
+      "k": 8,
+      "component": 0,
+      "equal": true
+    },
+    {
+      "rho": "3/5",
+      "k": 8,
+      "component": 1,
+      "equal": true
+    },
+    {
+      "rho": "3/5",
+      "k": 8,
+      "component": 2,
+      "equal": true
+    },
+    {
+      "rho": "3/5",
+      "k": 8,
+      "component": 3,
+      "equal": true
+    },
+    {
+      "rho": "3/5",
+      "k": 8,
+      "component": 4,
+      "equal": true
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "status": "POST_PRIMARY_DESCRIPTIVE_ANALYSIS",
+  "started_utc": "2026-10-09T18:27:41.119982+00:00",
+  "primary_finished_utc": "2026-10-09T18:21:20.976210+00:00",
+  "primary_specification_changed": false,
+  "grouping": "Existing author minor_cell_type; all epithelial cells retained; no new subtype size cutoffs",
+  "patient_mean_components": {
+    "observed_within_subtype_component": 1.6099730279472628e-09,
+    "observed_between_subtype_component": 7.00577354874982e-10,
+    "factorial_molecule_correction": 1.783179701086595e-12,
+    "H_minus_U": 2.312333562523331e-09
+  },
+  "max_decomposition_abs_error": 4.963083675318166e-24,
+  "interpretation": "Exact decomposition of observed RNA-proportion H-U; no regulatory or latent subtype covariance claim"
+}

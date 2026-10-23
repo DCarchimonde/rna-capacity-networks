@@ -1,0 +1,19 @@
+{
+  "endpoint": "author MMRStatus",
+  "primary_cohort": "expanded62",
+  "primary_graph": "integrin26",
+  "primary_resolution": 500,
+  "primary_increment": "clinical_mean_R2_plus_delta versus clinical_mean_R2",
+  "model": "L2 logistic C=1; no tuning; leave-one-original-patient-out; training-only scaling",
+  "gene_features": "log10(mean count fraction+1e-8)",
+  "clinical_features": [
+    "age",
+    "sex M indicator",
+    "right-sided location indicator"
+  ],
+  "covariate_rationale": "assess expression and molecular-resolution increment beyond basic patient context",
+  "selection": "No selection based on MMR effect size or significance",
+  "independence": "Original 23 patients are included in expanded 62; no external phenotype replication",
+  "confidence_intervals": "descriptive patient bootstrap of fixed held-out predictions",
+  "seed": 26101878
+}

@@ -1,0 +1,100 @@
+{
+  "started_utc": "2026-10-09T18:21:19.036203+00:00",
+  "finished_utc": "2026-10-09T18:21:20.976210+00:00",
+  "seconds": 1.940022050999687,
+  "input_kind": "independent",
+  "patients_in_manifest": 12,
+  "Epi_eligible_patients": 12,
+  "two_type_eligible_patients": 9,
+  "new_independent_analysis": true,
+  "low_depth_cells_in_UMI_draws": 0,
+  "cache_sha256": "25884937355803b84a282ac11510deeee6942726af8b357477d7c551c67a2ee3",
+  "gene_presence_mask": [
+    [
+      true,
+      true,
+      true,
+      false,
+      true
+    ],
+    [
+      true,
+      true,
+      true,
+      false,
+      true
+    ],
+    [
+      true,
+      true,
+      true,
+      false,
+      true
+    ],
+    [
+      true,
+      true,
+      true,
+      false,
+      true
+    ],
+    [
+      true,
+      true,
+      true,
+      false,
+      true
+    ],
+    [
+      true,
+      true,
+      true,
+      false,
+      true
+    ],
+    [
+      true,
+      true,
+      true,
+      false,
+      true
+    ],
+    [
+      true,
+      true,
+      true,
+      false,
+      true
+    ],
+    [
+      true,
+      true,
+      true,
+      false,
+      true
+    ],
+    [
+      true,
+      true,
+      true,
+      false,
+      true
+    ],
+    [
+      true,
+      true,
+      true,
+      false,
+      true
+    ],
+    [
+      true,
+      true,
+      true,
+      false,
+      true
+    ]
+  ],
+  "missing_edge_handling": "Per-edge exclusion; missing gene never reported as an observed zero",
+  "intervals": "descriptive patient percentile bootstrap; technical roles do not increase biological N"
+}

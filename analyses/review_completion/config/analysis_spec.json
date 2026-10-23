@@ -1,0 +1,62 @@
+{
+  "purpose": "Substantive completion of the simulated review; exploratory new analyses",
+  "frozen_before_new_results": true,
+  "seed": 26101873,
+  "sparse_scales": [
+    1e-05,
+    3e-05,
+    0.0001,
+    0.0003,
+    0.001
+  ],
+  "depths": [
+    1000,
+    10000
+  ],
+  "cells": [
+    100,
+    300,
+    1000,
+    3000
+  ],
+  "resolutions": [
+    2,
+    8,
+    32,
+    128,
+    500
+  ],
+  "independent_replicates": 256,
+  "matched_moment_family": "p=s(J,1,1,1,1); A J=0,2 with probabilities .25,.75; B J=1,3 with probabilities .75,.25",
+  "sparse_primary_metrics": [
+    "true population difference",
+    "finite score coverage",
+    "strict direction accuracy",
+    "difference standard deviation",
+    "flow and ratio error"
+  ],
+  "truth_integration": "Graph occupancy truncation with explicit binomial tail bound; small-k independent exact check",
+  "near_tie": "Two-edge star; p_center=1e-4, p_leaves=(1+-delta)*1e-4; delta=0,.02,.1,.5; depths=1000,10000",
+  "near_tie_metrics": [
+    "minimum numerator bias",
+    "ratio bias",
+    "edge selection frequency",
+    "bootstrap coverage"
+  ],
+  "background": "Vary graph abundance at fixed within-panel composition; contrast whole-transcriptome k and panel-only n; report selection coverage",
+  "phenotype": "Author MMRStatus; one row per patient; fixed L2 logistic model; leave-one-patient-out CV with training-only standardization; compare mean abundance, R2, R500 and their increment; two-sided association and paired CV loss",
+  "phenotype_cohort": "Previously analyzed 23 patients and expanded public atlas tumor epithelial cohort; overlapping, not independent validation",
+  "phenotype_primary_k": 500,
+  "patient_eligibility": "at least 100 epithelial tumor cells at all-gene L>=500; fixed eligible set across k",
+  "no_endpoint_tuning": true,
+  "depth_sensitivity_thresholds": [
+    0,
+    500,
+    1000,
+    2000
+  ],
+  "conditional_bootstrap_repetitions": 1000,
+  "full_integrin_graph": "26 genes,24 curated heterodimers,2 tree components; require source-row presence",
+  "scalability": "Sparse occupied-gene support, exact or explicitly bounded truncation; general flow solver; compare with the original closed-form integrin graph and independent LP",
+  "native_comparator": "Already corrected: same actually converged patients in both halves, unprojected raw native outputs"
+}

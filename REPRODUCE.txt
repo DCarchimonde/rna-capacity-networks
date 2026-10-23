@@ -1,0 +1,103 @@
+REPRODUCTION INSTRUCTIONS
+
+ENVIRONMENT
+Python 3.12; packages pinned in requirements.txt; g++ with C++17 and OpenMP.
+Linux and WSL are supported. Kernels compile on first use; no precompiled
+binaries are distributed.
+
+The GitHub distribution stores one large reference NPZ as two binary parts under
+data/reference_parts/. The entry point restores the original file automatically,
+checking the size and SHA-256 digest of each part and the completed archive.
+Existing output files are left in place. If running individual scripts directly,
+run the integrity stage once first to restore the supplied reference archive.
+
+From the extracted archive directory:
+    python -m venv .venv
+    . .venv/bin/activate
+    python -m pip install -r requirements.txt
+
+EXECUTION MODES
+    python reproduce.py --stage integrity
+Checks the downloaded files against MANIFEST_SHA256.json. Run before modifying
+or regenerating outputs. The manifest describes the supplied release, not
+later outputs whose execution dates, timings and plot metadata may differ.
+
+    python reproduce.py --stage checks
+Runs exact rational and symbolic identities, LP/maximum-flow comparisons,
+conditional-versus-enumeration checks, sparse-bound tests, count checks and
+manuscript-result consistency checks. Some checks inspect supplied reference
+results; this mode does not rerun every simulation or refit all models.
+
+    python reproduce.py --stage figures
+Regenerates the eight main and four supplementary figures from supplied results.
+
+    python reproduce.py --stage summaries
+Applies the supplied fixed refinement and rebuilds bivariate decomposition,
+MMR models, deletion summaries, source tables and final figures. It uses cached
+cell flows and does not recompute the full integration or simulation grid.
+
+    python reproduce.py --stage core
+Recomputes the 62-patient graph flows from count projections, reruns the five
+fixed-budget refinements and the paired two-statistic permutation experiment,
+then executes summaries and figures.
+
+    python reproduce.py --stage full
+Runs 43 ordered steps: pair analyses; molecular-resolution simulations and
+cohort estimates; CS-CORE and exact plug-in comparisons; sparse, detection and
+near-tie simulations; patient intervals; fixed-bivariate Wald diagnostic and
+permutation grid; full integration; refinement; paired permutation comparison;
+summaries; figures; and numerical checks. The full mode also regenerates the
+synthetic evaluation counts and component lookup tables from their fixed seeds.
+
+The complete replay can take tens of minutes or longer, depending on hardware.
+Use a CPU machine with at least 8 GB RAM and several GB of free working space.
+No GPU is needed. Original-source extraction is a separate optional operation.
+
+    python reproduce.py --stage full --list
+Prints commands without executing them. Commands can also run individually.
+The driver saves stdout, stderr and timing under reproduction/<run>/ and stops
+on failure. After correcting an environment issue, use --start-step N to resume;
+earlier steps must already have succeeded in that working copy.
+
+The default is four OpenMP threads and one BLAS thread; --threads changes the
+OpenMP setting. The H benchmark also uses four worker processes. The driver
+resolves its project root and can be called from another working directory.
+
+ORDER AND INTERPRETATION
+A fresh real_expansion.py run must be followed by refine_close_orders.py and
+integration/propagate_refinement.py before dependent tables are rebuilt.
+The driver handles this order. Refinement uses the recorded patients, budgets
+and seeds; it does not select a new graph, endpoint or model.
+
+The full graph has 62 patients and 113,216 epithelial cells. Of the 119
+R2-to-R500 order reversals, 43 are already present in the independent-edge
+comparator and 76 appear after shared capacity. These describe estimated
+orders, not statistically significant patient differences.
+
+The Wald diagnostic and permutation grid share simulated cells. Both remain
+because Supplementary Note S18 documents this diagnostic. The paired D_G/R500
+experiment uses its separately recorded permutation seed, with identical cells
+and label allocations for both statistics. R500 is formed after averaging
+component flows; cellwise ratios are not averaged.
+
+The full replay starts from deposited count projections. It does not download
+or re-extract the original 1.2-GB atlas HDF5 or the second cohort's GEO matrices.
+These have separate source checksums and extraction commands in DATA_SOURCES.txt.
+Previously examined CRC datasets remain exploratory for these reanalyses; the
+62-patient expansion is not a new external validation cohort.
+
+Runtime measurements, plot metadata and execution dates vary across machines.
+Scientific values should agree within the stated check-script tolerances.
+The supplied reference results retain the measurements reported in the paper;
+VALIDATION.txt describes the present replay separately from original execution.
+
+NUMERICAL REPRODUCIBILITY OF THE PAIRED PERMUTATION TEST
+inputs/permutation_groups.npz in analyses/second_round/ fixes the integer category
+labels and ordering of the original component lookup. This is an input to the
+randomization protocol, not a saved p-value or rejection decision. Component
+values are recalculated and checked against the reference at 64 machine epsilons
+of their scale; numerically equivalent rows are then canonicalised consistently
+for observed and permuted statistics. This prevents roundoff-level splits or
+reordering of identical categories from changing the seeded random-allocation
+stream. The randomization design, cells, seeds and scientific statistics remain
+fixed. The grouping record documents the source lookup digests.

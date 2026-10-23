@@ -1,0 +1,6 @@
+{
+  "independent_LP_checks": 1040,
+  "all_passed": true,
+  "cyclic_graph_solver": "SciPy maximum_flow; no forest formula applied to cycles",
+  "integration_distinction": "Full expectation exact enumeration is combinatorial; the scalable routine integrates low occupancy exactly and uses controlled conditional MC in the residual"
+}

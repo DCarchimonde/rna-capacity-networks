@@ -1,0 +1,30 @@
+{
+  "finished_utc": "2026-10-23T12:01:13.202906+00:00",
+  "all_checks_passed": true,
+  "official_git_blob": "8dd091cc97f4c668fb82e1eeb8f10018bef8ae16",
+  "official_file_unchanged": true,
+  "traced_vs_untraced_output_arrays_bitwise_equal": 6,
+  "constant_depth_raw_parameter_identity_max_error": 6.938893903907228e-18,
+  "complete_U_statistic_graph_flow_checks": 81,
+  "U_statistic_max_error": 1.1102230246251565e-16,
+  "plugin_independent_multinomial_flow_checks": 270,
+  "plugin_max_error": 6.106226635438361e-16,
+  "real_equal_cell_H_replay_max_errors": {
+    "D": {
+      "full": 1.0587911840678754e-22,
+      "halves": 3.1763735522036263e-22,
+      "thin": 4.235164736271502e-22
+    },
+    "I": {
+      "full": 7.940933880509066e-23,
+      "halves": 1.3234889800848443e-22,
+      "thin": 2.117582368135751e-22
+    }
+  },
+  "real_R2_identity_max_error": 2.55351295663786e-15,
+  "old_768_cohorts_all_scores_replayed": true,
+  "all_24_original_raw_count_snapshots_equal": true,
+  "old_192_R8_cohorts_replayed": true,
+  "common_floating_arithmetic_rule_checked": true,
+  "missing_ITGB3_handled_as_unavailable": true
+}

@@ -1,0 +1,12 @@
+{
+  "generation_seed": 26101903,
+  "permutation_seed": 26101904,
+  "permutations": 199,
+  "repetitions": 256,
+  "finite_sample_null": "identical cell-count distributions in the two groups; exchangeable cell labels",
+  "statistic": "absolute difference of mean per-cell shared-capacity loss",
+  "pvalue": "(1 + number of permuted statistics >= observed)/(199+1)",
+  "allocation": "multivariate hypergeometric category allocation; both estimators share identical permutations",
+  "constant_statistics": "p=1, retained in denominator",
+  "reason": "the initial normal Wald diagnostic was inflated at small n; permutation results are primary"
+}

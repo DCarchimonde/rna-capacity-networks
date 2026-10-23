@@ -1,0 +1,38 @@
+{
+  "seed": 26101903,
+  "repetitions": 256,
+  "scales": [
+    1e-05,
+    0.0001,
+    0.0003,
+    0.001
+  ],
+  "depths": [
+    1000,
+    10000
+  ],
+  "sample_sizes": [
+    100,
+    300,
+    1000,
+    3000
+  ],
+  "k": 500,
+  "baseline_expression": ".1*s",
+  "constant_six_gene_fraction": "3.6*s",
+  "alternative_theta": [
+    0.5,
+    -0.5
+  ],
+  "null_theta": [
+    0,
+    0
+  ],
+  "test": "two-sided normal Wald test on difference of normalized shared-capacity deficits using cell influence variances",
+  "undefined_test": "count as not rejected; report its frequency",
+  "estimators": [
+    "conditional hypergeometric",
+    "multinomial plug-in"
+  ],
+  "status": "new exploratory simulation design; no clinical endpoint is used"
+}

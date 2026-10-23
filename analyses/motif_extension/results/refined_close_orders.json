@@ -1,0 +1,52 @@
+[
+  {
+    "patient": "C132",
+    "cells": 1367,
+    "R": 0.604495481471716,
+    "integration_mc_se": 4.290615297963253e-06,
+    "seconds": 3.6929092989994388,
+    "batches": 32,
+    "draws_per_batch": 1024,
+    "seed": 261020100
+  },
+  {
+    "patient": "C169",
+    "cells": 637,
+    "R": 0.6044399478424104,
+    "integration_mc_se": 1.1385043218740708e-05,
+    "seconds": 36.303442233998794,
+    "batches": 32,
+    "draws_per_batch": 16384,
+    "seed": 261020101
+  },
+  {
+    "patient": "C171",
+    "cells": 4865,
+    "R": 0.6046767451200046,
+    "integration_mc_se": 1.6021256107943875e-05,
+    "seconds": 15.40438722700128,
+    "batches": 32,
+    "draws_per_batch": 1024,
+    "seed": 261020102
+  },
+  {
+    "patient": "C156",
+    "cells": 640,
+    "R": 0.7214855852353728,
+    "integration_mc_se": 1.0087387410849569e-05,
+    "seconds": 2.1035744580003666,
+    "batches": 32,
+    "draws_per_batch": 1024,
+    "seed": 261020103
+  },
+  {
+    "patient": "C168",
+    "cells": 766,
+    "R": 0.7213254842938749,
+    "integration_mc_se": 1.68342921500306e-05,
+    "seconds": 60.141399033997004,
+    "batches": 32,
+    "draws_per_batch": 16384,
+    "seed": 261020104
+  }
+]

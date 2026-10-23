@@ -1,0 +1,25 @@
+Guide to principal numeric fields
+
+Use the headers and analysis specifications for each table. SOURCE_DATA_INDEX.txt
+maps the result families and lists their field names.
+
+k: molecular sampling resolution.
+R or R_k: retained-flow ratio after the worst single-edge deletion.
+A0 or A_0: intact mean component flow.
+A_<edge>: mean component flow after deleting the named edge.
+dominant_edge or bottleneck: edge with the smallest deletion component flow.
+R_ind: the independent-edge comparator where that label is present.
+D: consult the table's specification; D_G denotes shared-capacity loss in the
+decomposition, whereas cohort label D denotes GSE178341 in original analyses.
+cells, patients: analysis-specific retained counts, not total atlas size.
+MMRd and MMRp: source-study mismatch-repair deficient and proficient labels.
+all_pairs, opposite_pairs, unresolved_pairs: pair-count denominators and outcomes.
+Probabilities and rates are fractions unless the field or specification says
+otherwise; multiply fractions by 100 for percent and differences by 100 for
+percentage-point contrasts. Flow scores are not percentages by default.
+An interval label retains its stated uncertainty source (simulation, cell
+bootstrap, patient bootstrap or integration Monte Carlo).
+
+Count matrices are cached raw integer projections with all-feature RNA totals.
+The full original public atlas HDF5 is not included; the archive contains its
+26-gene projection, metadata, URL and SHA-256 identity.

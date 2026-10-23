@@ -1,0 +1,7 @@
+cohort,scope,patients,pairs,inversions,unresolved
+D,Epi,23,253,6,0
+D,Fibro,23,253,15,0
+D,balanced,23,253,27,0
+I,Epi,12,66,3,0
+I,Fibro,9,36,1,0
+I,balanced,9,36,1,0

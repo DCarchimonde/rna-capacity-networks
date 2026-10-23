@@ -1,0 +1,10 @@
+{
+  "cohorts": 1152,
+  "old_cohorts_replayed": 768,
+  "new_poisson_cohorts": 384,
+  "all_24_source_snapshots_identical": true,
+  "old_H_score_max_error": 9.26442286059391e-23,
+  "simulated_cells": 7948800,
+  "fit_calls": 105984,
+  "seconds": 31.406870878000518
+}

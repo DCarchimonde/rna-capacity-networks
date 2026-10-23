@@ -1,0 +1,29 @@
+{
+  "fixed_utc": "2026-10-09T16:58:23.217551+00:00",
+  "status": "Execution specification fixed before examining this source expression",
+  "source": "GSE166555",
+  "primary": "Epi H(ITGAV,ITGB6) and patient-mean H minus cross-cell U",
+  "secondary": "All four edges, Fibro and balanced 0.5 Epi/0.5 Fibro, cell-split and molecule-thinning repeatability",
+  "minimum_UMI": 500,
+  "minimum_Epi": 100,
+  "minimum_Fibro": 30,
+  "cell_splits": 20,
+  "cell_split_seed_base": 4402000,
+  "UMI_draws": 100,
+  "q": 0.5,
+  "UMI_seed_base": 261009890,
+  "patient_bootstrap": 2000,
+  "patient_bootstrap_seed": 261009891,
+  "gene_order": [
+    "ITGA5",
+    "ITGAV",
+    "ITGB1",
+    "ITGB3",
+    "ITGB6"
+  ],
+  "sample_selection": "One untreated primary specimen per original patient; lower GEO accession for tied or unavailable timing. Patient009: choose GSM5075665/p009t1; no merge without lesion evidence.",
+  "bootstrap_unit": "Original patients; exclude duplicate copies of the same original patient from pair denominator. Descriptive percentile intervals.",
+  "methods": "Factorial H and naive same-cell H share the H target. Cross-cell U is a marginal-summary baseline with a different target. No population truth asserted for empirical rankings.",
+  "missing": "Missing target gene row excludes score; a present zero row remains zero. Undefined strict direction when no resolved pairs is NA.",
+  "development_cache_sha256": "15f16a17da11a8b4d3bbc403b15fffd9cc8a51ba2e79a789ed04620be501f044"
+}

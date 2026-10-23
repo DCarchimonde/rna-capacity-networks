@@ -1,0 +1,13 @@
+patient,Epi_cells,Fibro_cells,Epi_eligible,two_type_eligible
+p007,1011,35,True,True
+p008,570,238,True,True
+p009,2055,7,True,False
+p012,906,45,True,True
+p013,1125,47,True,True
+p014,1277,123,True,True
+p016,967,261,True,True
+p017,1775,402,True,True
+p020,320,0,True,False
+p021,132,44,True,True
+p025,414,9,True,False
+p026,890,93,True,True

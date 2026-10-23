@@ -1,0 +1,1860 @@
+{
+  "date": "2026-10-23",
+  "status": "passed",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scipy": "1.17.0",
+    "matplotlib": "3.10.8",
+    "scikit_learn": "1.8.0",
+    "sympy": "1.14.0",
+    "compiler": "g++ 13.3.0",
+    "OpenMP_threads": 4,
+    "BLAS_threads": 1
+  },
+  "scope": "Full computational workflow from supplied count projections, with the corrected permutation step and resumed final checks. Original GEO extraction was not rerun.",
+  "workflow": [
+    {
+      "step": 1,
+      "command": [
+        "analyses/independent_pair/scripts/analyze_h.py",
+        "--cache",
+        "data/development_counts.npz",
+        "--spec",
+        "analyses/independent_pair/config/execution_spec.json",
+        "--out-dir",
+        "analyses/independent_pair/inputs/development_reference",
+        "--input-kind",
+        "development_replay"
+      ],
+      "passed": true
+    },
+    {
+      "step": 2,
+      "command": [
+        "analyses/independent_pair/scripts/analyze_h.py",
+        "--cache",
+        "data/independent_counts.npz",
+        "--spec",
+        "analyses/independent_pair/config/execution_spec.json",
+        "--out-dir",
+        "analyses/independent_pair/results/independent",
+        "--input-kind",
+        "independent"
+      ],
+      "passed": true
+    },
+    {
+      "step": 3,
+      "command": [
+        "analyses/independent_pair/scripts/summarize_replication.py",
+        "--root",
+        "analyses/independent_pair",
+        "--development-results",
+        "analyses/independent_pair/inputs/development_reference"
+      ],
+      "passed": true
+    },
+    {
+      "step": 4,
+      "command": [
+        "analyses/independent_pair/scripts/decompose_epithelial_subtypes.py",
+        "--root",
+        "analyses/independent_pair"
+      ],
+      "passed": true
+    },
+    {
+      "step": 5,
+      "command": [
+        "analyses/molecular_resolution/scripts/verify_theory.py"
+      ],
+      "passed": true
+    },
+    {
+      "step": 6,
+      "command": [
+        "analyses/molecular_resolution/scripts/run_simulations.py"
+      ],
+      "passed": true
+    },
+    {
+      "step": 7,
+      "command": [
+        "analyses/molecular_resolution/scripts/analyze_cohorts.py"
+      ],
+      "passed": true
+    },
+    {
+      "step": 8,
+      "command": [
+        "analyses/strong_comparators/scripts/benchmark_H.py"
+      ],
+      "passed": true
+    },
+    {
+      "step": 9,
+      "command": [
+        "analyses/strong_comparators/scripts/benchmark_R8.py"
+      ],
+      "passed": true
+    },
+    {
+      "step": 10,
+      "command": [
+        "analyses/strong_comparators/scripts/analyze_comparison.py"
+      ],
+      "passed": true
+    },
+    {
+      "step": 11,
+      "command": [
+        "scripts/sync_tables.py"
+      ],
+      "passed": true
+    },
+    {
+      "step": 12,
+      "command": [
+        "analyses/review_completion/scripts/sparse_experiments.py"
+      ],
+      "passed": true
+    },
+    {
+      "step": 13,
+      "command": [
+        "analyses/review_completion/scripts/detection_power.py"
+      ],
+      "passed": true
+    },
+    {
+      "step": 14,
+      "command": [
+        "analyses/review_completion/scripts/near_tie_background.py"
+      ],
+      "passed": true
+    },
+    {
+      "step": 15,
+      "command": [
+        "analyses/review_completion/scripts/patient_intervals.py"
+      ],
+      "passed": true
+    },
+    {
+      "step": 16,
+      "command": [
+        "analyses/motif_extension/scripts/parity_power.py"
+      ],
+      "passed": true
+    },
+    {
+      "step": 17,
+      "command": [
+        "analyses/motif_extension/scripts/parity_permutation.py"
+      ],
+      "passed": true
+    },
+    {
+      "step": 18,
+      "command": [
+        "analyses/review_completion/scripts/real_expansion.py"
+      ],
+      "passed": true
+    },
+    {
+      "step": 19,
+      "command": [
+        "analyses/motif_extension/scripts/refine_close_orders.py"
+      ],
+      "passed": true
+    },
+    {
+      "step": 20,
+      "command": [
+        "analyses/second_round/scripts/paired_power.py",
+        "--rebuild-cache"
+      ],
+      "passed": true,
+      "note": "Repeated after fixing numerical category ordering; all 2,048 original p-values and rejection decisions matched."
+    },
+    {
+      "step": 21,
+      "command": [
+        "integration/propagate_refinement.py"
+      ],
+      "passed": true
+    },
+    {
+      "step": 22,
+      "command": [
+        "analyses/motif_extension/scripts/analyze_competition.py"
+      ],
+      "passed": true
+    },
+    {
+      "step": 23,
+      "command": [
+        "analyses/review_completion/scripts/phenotype.py"
+      ],
+      "passed": true
+    },
+    {
+      "step": 24,
+      "command": [
+        "analyses/review_completion/scripts/pairout_auc.py"
+      ],
+      "passed": true
+    },
+    {
+      "step": 25,
+      "command": [
+        "analyses/review_completion/scripts/revision_summary.py"
+      ],
+      "passed": true
+    },
+    {
+      "step": 26,
+      "command": [
+        "analyses/second_round/scripts/deletion_edges.py"
+      ],
+      "passed": true
+    },
+    {
+      "step": 27,
+      "command": [
+        "analysis/review_diagnostics.py"
+      ],
+      "passed": true
+    },
+    {
+      "step": 28,
+      "command": [
+        "scripts/sync_tables.py"
+      ],
+      "passed": true
+    },
+    {
+      "step": 29,
+      "command": [
+        "scripts/check_results.py"
+      ],
+      "passed": true
+    },
+    {
+      "step": 30,
+      "command": [
+        "scripts/make_figures.py"
+      ],
+      "passed": true
+    },
+    {
+      "step": 31,
+      "command": [
+        "analyses/review_completion/scripts/make_figures.py"
+      ],
+      "passed": true
+    },
+    {
+      "step": 32,
+      "command": [
+        "integration/make_current_figures.py"
+      ],
+      "passed": true
+    },
+    {
+      "step": 33,
+      "command": [
+        "analyses/motif_extension/scripts/make_figures.py"
+      ],
+      "passed": true
+    },
+    {
+      "step": 34,
+      "command": [
+        "scripts/verify_equations_independent.py"
+      ],
+      "passed": true
+    },
+    {
+      "step": 35,
+      "command": [
+        "analyses/molecular_resolution/scripts/verify_theory.py"
+      ],
+      "passed": true
+    },
+    {
+      "step": 36,
+      "command": [
+        "analyses/strong_comparators/scripts/verify_comparison.py"
+      ],
+      "passed": true
+    },
+    {
+      "step": 37,
+      "command": [
+        "analyses/review_completion/scripts/engine.py"
+      ],
+      "passed": true
+    },
+    {
+      "step": 38,
+      "command": [
+        "analyses/review_completion/scripts/general_graph.py"
+      ],
+      "passed": true
+    },
+    {
+      "step": 39,
+      "command": [
+        "analyses/review_completion/scripts/scalability.py"
+      ],
+      "passed": true
+    },
+    {
+      "step": 40,
+      "command": [
+        "analyses/motif_extension/scripts/verify_theory.py"
+      ],
+      "passed": true
+    },
+    {
+      "step": 41,
+      "command": [
+        "analyses/second_round/scripts/check_sparse_bound.py"
+      ],
+      "passed": true
+    },
+    {
+      "step": 42,
+      "command": [
+        "analysis/verify_occupancy_decomposition.py"
+      ],
+      "passed": true
+    },
+    {
+      "step": 43,
+      "command": [
+        "scripts/check_results.py"
+      ],
+      "passed": true
+    }
+  ],
+  "reference_comparison": {
+    "rtol": 1e-10,
+    "atol": 1e-12,
+    "comparisons": [
+      {
+        "file": "data/resolution_cohort_summary.csv",
+        "kind": "table",
+        "rows": 45,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "data/independent_counts.npz",
+        "kind": "array_archive",
+        "arrays": 10,
+        "matched": true
+      },
+      {
+        "file": "data/D_H_scores.npz",
+        "kind": "array_archive",
+        "arrays": 11,
+        "matched": true
+      },
+      {
+        "file": "data/D_fit_status.csv.gz",
+        "kind": "table",
+        "rows": 12972,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "data/development_counts.npz",
+        "kind": "array_archive",
+        "arrays": 6,
+        "matched": true
+      },
+      {
+        "file": "data/I_H_scores.npz",
+        "kind": "array_archive",
+        "arrays": 11,
+        "matched": true
+      },
+      {
+        "file": "data/R8_simulation_summary.csv",
+        "kind": "table",
+        "rows": 36,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "data/patient_resolution_spectra.csv",
+        "kind": "table",
+        "rows": 840,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "data/H_simulation_paired_comparison.csv",
+        "kind": "table",
+        "rows": 126,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "data/I_fit_status.csv.gz",
+        "kind": "table",
+        "rows": 5922,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "data/resolution_transitions.csv",
+        "kind": "table",
+        "rows": 99,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "review/conditional_graph_occupancy.csv",
+        "kind": "table",
+        "rows": 20,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "review/patient_depth_and_sparsity.csv",
+        "kind": "table",
+        "rows": 67,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "review/R8_to_R500_inversions.csv",
+        "kind": "table",
+        "rows": 6,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "review/gene_detection_and_fraction.csv",
+        "kind": "table",
+        "rows": 20,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "review/native_CSCORE_split_coverage.csv",
+        "kind": "table",
+        "rows": 40,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "review/retained_depth_and_sparsity.csv",
+        "kind": "table",
+        "rows": 4,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "review/native_CSCORE_common_converged.csv",
+        "kind": "table",
+        "rows": 4,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "source_data/Review_high_order_detection_power.csv",
+        "kind": "table",
+        "rows": 12,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "source_data/H_real_paired_comparison.csv",
+        "kind": "table",
+        "rows": 72,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "source_data/resolution_cohort_summary.csv",
+        "kind": "table",
+        "rows": 45,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "source_data/independent_H_coupling.csv",
+        "kind": "table",
+        "rows": 12,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "source_data/independent_H_retention.csv",
+        "kind": "table",
+        "rows": 36,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "source_data/Review_patient_score_intervals.csv",
+        "kind": "table",
+        "rows": 175,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "source_data/Second_Round_worst_deletion_switches.csv",
+        "kind": "table",
+        "rows": 2,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "source_data/patient_cell_counts.csv",
+        "kind": "table",
+        "rows": 35,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "source_data/R8_real_comparison.csv",
+        "kind": "table",
+        "rows": 9,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "source_data/Review_panel_conditional_selection.csv",
+        "kind": "table",
+        "rows": 222,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "source_data/Review_expanded_graph_scores.csv",
+        "kind": "table",
+        "rows": 930,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "source_data/Second_Round_paired_permutation_replicates.csv",
+        "kind": "table",
+        "rows": 2048,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "source_data/Motif_competition_decomposition.csv",
+        "kind": "table",
+        "rows": 370,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "source_data/Second_Round_worst_deletion_by_patient.csv",
+        "kind": "table",
+        "rows": 310,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "source_data/H_real_primary_summary.csv",
+        "kind": "table",
+        "rows": 162,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "source_data/Review_MMR_incremental_comparison.csv",
+        "kind": "table",
+        "rows": 12,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "source_data/R8_paired_comparison.csv",
+        "kind": "table",
+        "rows": 16,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "source_data/R8_simulation_summary.csv",
+        "kind": "table",
+        "rows": 36,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "source_data/Review_sparse_estimation.csv",
+        "kind": "table",
+        "rows": 800,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "source_data/Review_MMR_leave_pair_out_auc.csv",
+        "kind": "table",
+        "rows": 7,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "source_data/Review_background_only_truth.csv",
+        "kind": "table",
+        "rows": 205,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "source_data/Second_Round_worst_deletion_counts.csv",
+        "kind": "table",
+        "rows": 15,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "source_data/patient_resolution_spectra.csv",
+        "kind": "table",
+        "rows": 840,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "source_data/Review_fullgraph_runtime.csv",
+        "kind": "table",
+        "rows": 5,
+        "ignored_runtime_columns": [
+          "seconds"
+        ],
+        "matched": true
+      },
+      {
+        "file": "source_data/independent_count_layer_audit.csv",
+        "kind": "table",
+        "rows": 72,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "source_data/Review_depth_threshold_sensitivity.csv",
+        "kind": "table",
+        "rows": 2660,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "source_data/D_patient_H.csv",
+        "kind": "table",
+        "rows": 1449,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "source_data/independent_specimen_selection.csv",
+        "kind": "table",
+        "rows": 13,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "source_data/Second_Round_population_truth.csv",
+        "kind": "table",
+        "rows": 16,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "source_data/Review_sparse_truth.csv",
+        "kind": "table",
+        "rows": 25,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "source_data/Second_Round_all_deletion_components.csv",
+        "kind": "table",
+        "rows": 7440,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "source_data/Review_MMR_fixed_model_cv.csv",
+        "kind": "table",
+        "rows": 42,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "source_data/Motif_parity_sparse_truth.csv",
+        "kind": "table",
+        "rows": 16,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "source_data/I_patient_H.csv",
+        "kind": "table",
+        "rows": 480,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "source_data/graph_simulation_summary.csv",
+        "kind": "table",
+        "rows": 30,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "source_data/Second_Round_paired_permutation_summary.csv",
+        "kind": "table",
+        "rows": 8,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "source_data/Motif_competition_summary.csv",
+        "kind": "table",
+        "rows": 10,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "source_data/H_simulation_paired_comparison.csv",
+        "kind": "table",
+        "rows": 126,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "source_data/Motif_parity_permutation_power.csv",
+        "kind": "table",
+        "rows": 128,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "source_data/Review_near_tie_bias.csv",
+        "kind": "table",
+        "rows": 32,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "source_data/resolution_transitions.csv",
+        "kind": "table",
+        "rows": 99,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/strong_comparators/inputs/simulation_source_case_10.npz",
+        "kind": "array_archive",
+        "arrays": 7,
+        "matched": true
+      },
+      {
+        "file": "analyses/strong_comparators/inputs/simulation_source_case_7.npz",
+        "kind": "array_archive",
+        "arrays": 7,
+        "matched": true
+      },
+      {
+        "file": "analyses/strong_comparators/inputs/simulation_source_case_22.npz",
+        "kind": "array_archive",
+        "arrays": 7,
+        "matched": true
+      },
+      {
+        "file": "analyses/strong_comparators/inputs/independent_counts.npz",
+        "kind": "array_archive",
+        "arrays": 10,
+        "matched": true
+      },
+      {
+        "file": "analyses/strong_comparators/inputs/simulation_source_case_8.npz",
+        "kind": "array_archive",
+        "arrays": 7,
+        "matched": true
+      },
+      {
+        "file": "analyses/strong_comparators/inputs/simulation_source_case_0.npz",
+        "kind": "array_archive",
+        "arrays": 7,
+        "matched": true
+      },
+      {
+        "file": "analyses/strong_comparators/inputs/simulation_source_case_5.npz",
+        "kind": "array_archive",
+        "arrays": 7,
+        "matched": true
+      },
+      {
+        "file": "analyses/strong_comparators/inputs/simulation_source_case_15.npz",
+        "kind": "array_archive",
+        "arrays": 7,
+        "matched": true
+      },
+      {
+        "file": "analyses/strong_comparators/inputs/simulation_source_case_4.npz",
+        "kind": "array_archive",
+        "arrays": 7,
+        "matched": true
+      },
+      {
+        "file": "analyses/strong_comparators/inputs/simulation_source_case_14.npz",
+        "kind": "array_archive",
+        "arrays": 7,
+        "matched": true
+      },
+      {
+        "file": "analyses/strong_comparators/inputs/simulation_source_case_6.npz",
+        "kind": "array_archive",
+        "arrays": 7,
+        "matched": true
+      },
+      {
+        "file": "analyses/strong_comparators/inputs/simulation_source_case_16.npz",
+        "kind": "array_archive",
+        "arrays": 7,
+        "matched": true
+      },
+      {
+        "file": "analyses/strong_comparators/inputs/simulation_source_case_20.npz",
+        "kind": "array_archive",
+        "arrays": 7,
+        "matched": true
+      },
+      {
+        "file": "analyses/strong_comparators/inputs/simulation_source_case_17.npz",
+        "kind": "array_archive",
+        "arrays": 7,
+        "matched": true
+      },
+      {
+        "file": "analyses/strong_comparators/inputs/simulation_source_case_11.npz",
+        "kind": "array_archive",
+        "arrays": 7,
+        "matched": true
+      },
+      {
+        "file": "analyses/strong_comparators/inputs/development_counts.npz",
+        "kind": "array_archive",
+        "arrays": 6,
+        "matched": true
+      },
+      {
+        "file": "analyses/strong_comparators/inputs/simulation_source_case_19.npz",
+        "kind": "array_archive",
+        "arrays": 7,
+        "matched": true
+      },
+      {
+        "file": "analyses/strong_comparators/inputs/simulation_source_case_13.npz",
+        "kind": "array_archive",
+        "arrays": 7,
+        "matched": true
+      },
+      {
+        "file": "analyses/strong_comparators/inputs/simulation_source_case_18.npz",
+        "kind": "array_archive",
+        "arrays": 7,
+        "matched": true
+      },
+      {
+        "file": "analyses/strong_comparators/inputs/simulation_source_case_9.npz",
+        "kind": "array_archive",
+        "arrays": 7,
+        "matched": true
+      },
+      {
+        "file": "analyses/strong_comparators/inputs/simulation_source_case_3.npz",
+        "kind": "array_archive",
+        "arrays": 7,
+        "matched": true
+      },
+      {
+        "file": "analyses/strong_comparators/inputs/simulation_source_case_12.npz",
+        "kind": "array_archive",
+        "arrays": 7,
+        "matched": true
+      },
+      {
+        "file": "analyses/strong_comparators/inputs/simulation_source_case_23.npz",
+        "kind": "array_archive",
+        "arrays": 7,
+        "matched": true
+      },
+      {
+        "file": "analyses/strong_comparators/inputs/simulation_source_case_2.npz",
+        "kind": "array_archive",
+        "arrays": 7,
+        "matched": true
+      },
+      {
+        "file": "analyses/strong_comparators/inputs/simulation_source_case_1.npz",
+        "kind": "array_archive",
+        "arrays": 7,
+        "matched": true
+      },
+      {
+        "file": "analyses/strong_comparators/inputs/original_simulation_scores.npz",
+        "kind": "array_archive",
+        "arrays": 11,
+        "matched": true
+      },
+      {
+        "file": "analyses/strong_comparators/inputs/simulation_source_case_21.npz",
+        "kind": "array_archive",
+        "arrays": 7,
+        "matched": true
+      },
+      {
+        "file": "analyses/strong_comparators/results/H_simulation_fit_summary.csv",
+        "kind": "table",
+        "rows": 50,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/strong_comparators/results/H_simulation_fit_status.csv.gz",
+        "kind": "table",
+        "rows": 105984,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/strong_comparators/results/R8_plugin_patient_scores.csv",
+        "kind": "table",
+        "rows": 2304,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/strong_comparators/results/I_H_agreement.csv",
+        "kind": "table",
+        "rows": 48,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/strong_comparators/results/R8_real_comparison.csv",
+        "kind": "table",
+        "rows": 9,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/strong_comparators/results/D_H_scores.npz",
+        "kind": "array_archive",
+        "arrays": 11,
+        "matched": true
+      },
+      {
+        "file": "analyses/strong_comparators/results/D_fit_status.csv.gz",
+        "kind": "table",
+        "rows": 12972,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/strong_comparators/results/H_simulation_metrics.csv.gz",
+        "kind": "table",
+        "rows": 89856,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/strong_comparators/results/real_primary_paired_comparison.csv",
+        "kind": "table",
+        "rows": 72,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/strong_comparators/results/I_H_scores.npz",
+        "kind": "array_archive",
+        "arrays": 11,
+        "matched": true
+      },
+      {
+        "file": "analyses/strong_comparators/results/R8_paired_comparison.csv",
+        "kind": "table",
+        "rows": 16,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/strong_comparators/results/R8_simulation_summary.csv",
+        "kind": "table",
+        "rows": 36,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/strong_comparators/results/R8_real_patient_scores.csv",
+        "kind": "table",
+        "rows": 168,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/strong_comparators/results/real_primary_summary.csv",
+        "kind": "table",
+        "rows": 162,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/strong_comparators/results/real_fit_summary.csv",
+        "kind": "table",
+        "rows": 26,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/strong_comparators/results/D_H_agreement.csv",
+        "kind": "table",
+        "rows": 63,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/strong_comparators/results/H_simulation_summary.csv",
+        "kind": "table",
+        "rows": 1872,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/strong_comparators/results/D_patient_H.csv",
+        "kind": "table",
+        "rows": 1449,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/strong_comparators/results/R8_simulation_replicates.csv",
+        "kind": "table",
+        "rows": 1152,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/strong_comparators/results/H_simulation_scores.npz",
+        "kind": "array_archive",
+        "arrays": 8,
+        "matched": true
+      },
+      {
+        "file": "analyses/strong_comparators/results/I_patient_H.csv",
+        "kind": "table",
+        "rows": 480,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/strong_comparators/results/real_R2_agreement.csv",
+        "kind": "table",
+        "rows": 45,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/strong_comparators/results/H_simulation_paired_comparison.csv",
+        "kind": "table",
+        "rows": 126,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/strong_comparators/results/I_fit_status.csv.gz",
+        "kind": "table",
+        "rows": 5922,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/strong_comparators/results/I_H_roles.csv.gz",
+        "kind": "table",
+        "rows": 6720,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/independent_pair/config/selected_tumor_manifest.csv",
+        "kind": "table",
+        "rows": 13,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/independent_pair/inputs/development_eligible_counts.npz",
+        "kind": "array_archive",
+        "arrays": 6,
+        "matched": true
+      },
+      {
+        "file": "analyses/independent_pair/results/codetection_counts.csv",
+        "kind": "table",
+        "rows": 24,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/independent_pair/results/epithelial_subtype_decomposition.csv",
+        "kind": "table",
+        "rows": 12,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/independent_pair/results/count_layer_audit.csv",
+        "kind": "table",
+        "rows": 72,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/independent_pair/results/initial_all_gene_qualification.csv",
+        "kind": "table",
+        "rows": 12,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/independent_pair/results/epithelial_subtype_means.csv",
+        "kind": "table",
+        "rows": 187,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/independent_pair/results/cohort_comparison.csv",
+        "kind": "table",
+        "rows": 6,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/independent_pair/results/header_qualification.csv",
+        "kind": "table",
+        "rows": 12,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/independent_pair/inputs/development_reference/UMI_roles.csv",
+        "kind": "table",
+        "rows": 3600,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/independent_pair/inputs/development_reference/patient_H.csv",
+        "kind": "table",
+        "rows": 276,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/independent_pair/inputs/development_reference/coupling_summary.csv",
+        "kind": "table",
+        "rows": 12,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/independent_pair/inputs/development_reference/scores.npz",
+        "kind": "array_archive",
+        "arrays": 9,
+        "matched": true
+      },
+      {
+        "file": "analyses/independent_pair/inputs/development_reference/split_summary.csv",
+        "kind": "table",
+        "rows": 36,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/independent_pair/inputs/prepared/qualified_counts.npz",
+        "kind": "array_archive",
+        "arrays": 10,
+        "matched": true
+      },
+      {
+        "file": "analyses/independent_pair/inputs/prepared/qualification.csv",
+        "kind": "table",
+        "rows": 12,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/independent_pair/results/independent/UMI_roles.csv",
+        "kind": "table",
+        "rows": 3600,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/independent_pair/results/independent/patient_H.csv",
+        "kind": "table",
+        "rows": 144,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/independent_pair/results/independent/split_roles.csv",
+        "kind": "table",
+        "rows": 1440,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/independent_pair/results/independent/coupling_summary.csv",
+        "kind": "table",
+        "rows": 12,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/independent_pair/results/independent/patient_qualification.csv",
+        "kind": "table",
+        "rows": 12,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/independent_pair/results/independent/scores.npz",
+        "kind": "array_archive",
+        "arrays": 9,
+        "matched": true
+      },
+      {
+        "file": "analyses/independent_pair/results/independent/split_summary.csv",
+        "kind": "table",
+        "rows": 36,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/review_completion/inputs/GSE178341_cluster.csv.gz",
+        "kind": "table",
+        "rows": 370115,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/review_completion/inputs/development_patient_metadata.csv",
+        "kind": "table",
+        "rows": 23,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/review_completion/inputs/integrin_edges_with_provenance.csv",
+        "kind": "table",
+        "rows": 24,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/review_completion/inputs/atlas_patient_eligibility.csv",
+        "kind": "table",
+        "rows": 62,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/review_completion/inputs/atlas_integrins_all_cells.npz",
+        "kind": "array_archive",
+        "arrays": 9,
+        "matched": true
+      },
+      {
+        "file": "analyses/review_completion/inputs/GSE178341_metatables.csv.gz",
+        "kind": "table",
+        "rows": 370115,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/review_completion/inputs/atlas_joined_metadata.csv.gz",
+        "kind": "table",
+        "rows": 370115,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/review_completion/results/MMR_heldout_predictions.csv",
+        "kind": "table",
+        "rows": 1785,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/review_completion/results/panel_conditional_selection.csv",
+        "kind": "table",
+        "rows": 222,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/review_completion/results/depth_threshold_sensitivity.csv",
+        "kind": "table",
+        "rows": 2660,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/review_completion/results/near_tie_rank_accuracy.csv",
+        "kind": "table",
+        "rows": 32,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/review_completion/results/expanded_graph_scores.csv",
+        "kind": "table",
+        "rows": 930,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/review_completion/results/scalability_integrand_benchmark.csv",
+        "kind": "table",
+        "rows": 6,
+        "ignored_runtime_columns": [
+          "seconds"
+        ],
+        "matched": true
+      },
+      {
+        "file": "analyses/review_completion/results/sparse_truth.csv",
+        "kind": "table",
+        "rows": 25,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/review_completion/results/expanded_fullgraph_cellflows.npz",
+        "kind": "array_archive",
+        "arrays": 5,
+        "matched": true
+      },
+      {
+        "file": "analyses/review_completion/results/MMR_fixed_model_cv.csv",
+        "kind": "table",
+        "rows": 42,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/review_completion/results/MMR_leave_pair_out_predictions.csv",
+        "kind": "table",
+        "rows": 6664,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/review_completion/results/near_tie_bias.csv",
+        "kind": "table",
+        "rows": 32,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/review_completion/results/MMR_leave_pair_out_auc.csv",
+        "kind": "table",
+        "rows": 7,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/review_completion/results/independent_common_cellflows.npz",
+        "kind": "array_archive",
+        "arrays": 4,
+        "matched": true
+      },
+      {
+        "file": "analyses/review_completion/results/sparse_runtime.csv",
+        "kind": "table",
+        "rows": 10,
+        "ignored_runtime_columns": [
+          "elapsed_seconds"
+        ],
+        "matched": true
+      },
+      {
+        "file": "analyses/review_completion/results/sparse_estimation.csv",
+        "kind": "table",
+        "rows": 800,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/review_completion/results/MMR_incremental_comparison.csv",
+        "kind": "table",
+        "rows": 12,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/review_completion/results/patient_score_intervals.csv",
+        "kind": "table",
+        "rows": 175,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/review_completion/results/expanded_patient_features.csv",
+        "kind": "table",
+        "rows": 62,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/review_completion/results/background_only_truth.csv",
+        "kind": "table",
+        "rows": 205,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/review_completion/results/expanded_selected_cellflows.npz",
+        "kind": "array_archive",
+        "arrays": 6,
+        "matched": true
+      },
+      {
+        "file": "analyses/review_completion/results/panel_background_invariant_truth.csv",
+        "kind": "table",
+        "rows": 4,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/review_completion/results/MMR_associations.csv",
+        "kind": "table",
+        "rows": 18,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/review_completion/results/high_order_detection_power.csv",
+        "kind": "table",
+        "rows": 12,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/review_completion/results/fullgraph_runtime.csv",
+        "kind": "table",
+        "rows": 5,
+        "ignored_runtime_columns": [
+          "seconds"
+        ],
+        "matched": true
+      },
+      {
+        "file": "analyses/second_round/inputs/permutation_groups.npz",
+        "kind": "array_archive",
+        "arrays": 6,
+        "matched": true
+      },
+      {
+        "file": "analyses/second_round/results/population_truth.csv",
+        "kind": "table",
+        "rows": 16,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/second_round/results/paired_permutation_summary.csv",
+        "kind": "table",
+        "rows": 8,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/second_round/results/worst_deletion_switches.csv",
+        "kind": "table",
+        "rows": 2,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/second_round/results/worst_deletion_counts.csv",
+        "kind": "table",
+        "rows": 15,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/second_round/results/paired_permutation_replicates.csv",
+        "kind": "table",
+        "rows": 2048,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/second_round/results/all_deletion_components.csv",
+        "kind": "table",
+        "rows": 7440,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/second_round/results/worst_deletion_by_patient.csv",
+        "kind": "table",
+        "rows": 310,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/second_round/cache/parity_component_lookup.npz",
+        "kind": "array_archive",
+        "arrays": 2,
+        "matched": true
+      },
+      {
+        "file": "analyses/second_round/cache/matched_component_lookup.npz",
+        "kind": "array_archive",
+        "arrays": 2,
+        "matched": true
+      },
+      {
+        "file": "analyses/second_round/cache/original_evaluation_cohorts.npz",
+        "kind": "array_archive",
+        "arrays": 4,
+        "matched": true
+      },
+      {
+        "file": "analyses/motif_extension/results/I_common4_competition_decomposition.csv",
+        "kind": "table",
+        "rows": 60,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/motif_extension/results/D_full26_bivariate_cellflows.npz",
+        "kind": "array_archive",
+        "arrays": 4,
+        "matched": true
+      },
+      {
+        "file": "analyses/motif_extension/results/parity_permutation_power.csv",
+        "kind": "table",
+        "rows": 128,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/motif_extension/results/parity_resolution_curves.csv",
+        "kind": "table",
+        "rows": 140,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/motif_extension/results/D_full26_competition_decomposition.csv",
+        "kind": "table",
+        "rows": 310,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/motif_extension/results/competition_decomposition.csv",
+        "kind": "table",
+        "rows": 370,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/motif_extension/results/D_full26_edge_compensation.csv",
+        "kind": "table",
+        "rows": 7440,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/motif_extension/results/I_common4_bivariate_cellflows.npz",
+        "kind": "array_archive",
+        "arrays": 4,
+        "matched": true
+      },
+      {
+        "file": "analyses/motif_extension/results/I_common4_wedge_moments.csv",
+        "kind": "table",
+        "rows": 24,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/motif_extension/results/competition_summary.csv",
+        "kind": "table",
+        "rows": 10,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/motif_extension/results/D_full26_wedge_moments.csv",
+        "kind": "table",
+        "rows": 5332,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/motif_extension/results/parity_power.csv",
+        "kind": "table",
+        "rows": 128,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/motif_extension/results/parity_sparse_truth.csv",
+        "kind": "table",
+        "rows": 16,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/motif_extension/results/I_common4_edge_compensation.csv",
+        "kind": "table",
+        "rows": 180,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/motif_extension/results/refined_close_cellflows.npz",
+        "kind": "array_archive",
+        "arrays": 3,
+        "matched": true
+      },
+      {
+        "file": "analyses/molecular_resolution/inputs/independent_counts.npz",
+        "kind": "array_archive",
+        "arrays": 10,
+        "matched": true
+      },
+      {
+        "file": "analyses/molecular_resolution/inputs/development_counts.npz",
+        "kind": "array_archive",
+        "arrays": 6,
+        "matched": true
+      },
+      {
+        "file": "analyses/molecular_resolution/results/simulation_summary.csv",
+        "kind": "table",
+        "rows": 30,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/molecular_resolution/results/conditional_randomization.csv",
+        "kind": "table",
+        "rows": 6,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/molecular_resolution/results/simulation_patient_scores.csv",
+        "kind": "table",
+        "rows": 11520,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/molecular_resolution/results/cohort_summary.csv",
+        "kind": "table",
+        "rows": 45,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/molecular_resolution/results/simulation_replicates.csv",
+        "kind": "table",
+        "rows": 960,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/molecular_resolution/results/split_roles.csv",
+        "kind": "table",
+        "rows": 1800,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/molecular_resolution/results/I_common3_cell_flows.npz",
+        "kind": "array_archive",
+        "arrays": 8,
+        "matched": true
+      },
+      {
+        "file": "analyses/molecular_resolution/results/depth_null_patient_summary.csv",
+        "kind": "table",
+        "rows": 120,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/molecular_resolution/results/D_full4_cell_flows.npz",
+        "kind": "array_archive",
+        "arrays": 8,
+        "matched": true
+      },
+      {
+        "file": "analyses/molecular_resolution/results/patient_spectrum.csv",
+        "kind": "table",
+        "rows": 840,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/molecular_resolution/results/D_common3_cell_flows.npz",
+        "kind": "array_archive",
+        "arrays": 8,
+        "matched": true
+      },
+      {
+        "file": "analyses/molecular_resolution/results/simulation_paired_gains.csv",
+        "kind": "table",
+        "rows": 8,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/molecular_resolution/results/resolution_transitions.csv",
+        "kind": "table",
+        "rows": 99,
+        "ignored_runtime_columns": [],
+        "matched": true
+      },
+      {
+        "file": "analyses/molecular_resolution/results/simulation_truth.csv",
+        "kind": "table",
+        "rows": 36,
+        "ignored_runtime_columns": [],
+        "matched": true
+      }
+    ],
+    "failures": []
+  },
+  "figures": [
+    {
+      "figure": "Figure_1",
+      "same_size": true,
+      "pixel_identical": true,
+      "different_pixels": 0
+    },
+    {
+      "figure": "Figure_2",
+      "same_size": true,
+      "pixel_identical": true,
+      "different_pixels": 0
+    },
+    {
+      "figure": "Figure_3",
+      "same_size": true,
+      "pixel_identical": true,
+      "different_pixels": 0
+    },
+    {
+      "figure": "Figure_4",
+      "same_size": true,
+      "pixel_identical": true,
+      "different_pixels": 0
+    },
+    {
+      "figure": "Figure_5",
+      "same_size": true,
+      "pixel_identical": true,
+      "different_pixels": 0
+    },
+    {
+      "figure": "Figure_6",
+      "same_size": true,
+      "pixel_identical": true,
+      "different_pixels": 0
+    },
+    {
+      "figure": "Figure_S1",
+      "same_size": true,
+      "pixel_identical": true,
+      "different_pixels": 0
+    },
+    {
+      "figure": "Figure_S2",
+      "same_size": true,
+      "pixel_identical": true,
+      "different_pixels": 0
+    },
+    {
+      "figure": "Figure_S3",
+      "same_size": true,
+      "pixel_identical": true,
+      "different_pixels": 0
+    },
+    {
+      "figure": "Figure_S4",
+      "same_size": true,
+      "pixel_identical": true,
+      "different_pixels": 0
+    },
+    {
+      "figure": "competition_components",
+      "same_size": true,
+      "pixel_identical": true,
+      "different_pixels": 0
+    },
+    {
+      "figure": "parity_detection",
+      "same_size": true,
+      "pixel_identical": true,
+      "different_pixels": 0
+    }
+  ],
+  "cpp_formatting": {
+    "all_passed": true,
+    "binary_identical": {
+      "analyses/strong_comparators/scripts/multinomial_plugin.cpp": true,
+      "analyses/review_completion/scripts/fast_integrin.cpp": true,
+      "analyses/review_completion/scripts/forest_residual.cpp": true,
+      "analyses/motif_extension/scripts/pair_flows.cpp": true,
+      "analyses/molecular_resolution/scripts/flow_resolution.cpp": true
+    }
+  },
+  "permutation_reproducibility": {
+    "fixed_category_input": "analyses/second_round/inputs/permutation_groups.npz",
+    "original_component_max_roundoff_difference": 1.734723475976807e-18,
+    "pvalues_matched": 2048,
+    "rejection_decisions_matched": 2048,
+    "sample_count_arrays_regenerated_exactly": true,
+    "values_recalculated": true,
+    "reason": "Prevent floating-point category splitting/order from changing the seeded random-allocation stream."
+  },
+  "development_reference_schema": "Current replay adds gene/edge availability fields and status columns; existing arrays and scientific values match the previous reference. Row order is standardised by the final pipeline.",
+  "original_reference_outputs": "Original result values and original runtime tables are retained, apart from the compatible development-reference schema update. Execution checksums for the current code are supplied by the release manifest.",
+  "repository_distribution": {
+    "format": "GitHub source tree with binary parts for one reference archive",
+    "reference_index": "data/reference_parts/index.json",
+    "restoration": "reproduce.py restores the archive before integrity checks or execution",
+    "checks": {
+      "restored_file_sha256_matches_original": true,
+      "existing_file_preserved": true,
+      "list_mode_has_no_restore_side_effect": true
+    },
+    "scientific_change": false
+  }
+}

@@ -1,0 +1,47 @@
+RELEASE VALIDATION - 23 OCTOBER 2026
+
+The 43-step computational workflow was executed from the supplied count
+projections. All stages completed successfully after correcting the numerical
+category-ordering issue described below. Raw GEO extraction was not repeated.
+
+Reference comparisons
+- 153 tables and 54 array archives agree with their replay counterparts.
+  Runtime columns are excluded from numerical equality checks.
+- Numeric comparisons use relative tolerance 1e-10 and absolute tolerance 1e-12.
+- All 2,048 paired-permutation p-values and rejection decisions match exactly.
+- The synthetic evaluation count arrays regenerate exactly from their seeds.
+- All 12 regenerated PDFs render identically to the manuscript figures at 110 dpi.
+- All five C++ kernels compile to byte-identical libraries before and after formatting.
+- The unchanged third-party CS-CORE source and licence are retained.
+
+Independent implementation checks
+- 1,198 rational/symbolic equation checks.
+- 60 exact occupancy-identity checks and 48 sparse-bound checks.
+- 973 LP deletion-compensation checks and bivariate integration checks.
+- 128 count, component and manuscript-result consistency checks.
+
+Permutation reproducibility correction
+Recomputing component values produced differences of at most 1.735e-18 in the
+matched-moment lookup. Grouping directly on those floating-point values changed
+category ordering and hence the seeded permutation stream. The release fixes
+the original integer category labels, recalculates the component values, and
+checks/canonicalises numerical identities within 64 machine epsilons of their
+scale. The observed and permuted statistics use the same canonical values.
+The original seeds, evaluation cells and statistics are retained. All reported
+p-values and decisions reproduce. See REPRODUCE.txt and the grouping input record.
+
+The reused development-reference tables now use the final pipeline schema,
+including availability/status fields. Their existing scientific values and
+arrays were checked before replacement. Original runtime measurements remain
+as reported; newly measured runtimes are not substituted into the paper.
+
+The full numerical comparison and workflow record are provided in
+review/reproduction_validation.json. These are computational checks, not
+additional external biological validation.
+
+GITHUB DISTRIBUTION
+One large reference NPZ is distributed as two binary parts. The entry point
+restores it before execution. The restored file was checked byte-for-byte
+against the validated archive; all arrays and their original compression are
+unchanged. Existing outputs are preserved, and listing commands does not
+restore files. See data/reference_parts/index.json for the component digests.

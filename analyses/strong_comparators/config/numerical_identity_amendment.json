@@ -1,0 +1,10 @@
+{
+  "created_utc": "2026-10-10T14:41:31.546620+00:00",
+  "reason": "Parameter conversion mu_g mu_h + cov_gh cancels to a mathematically exact zero for constant-depth samples without co-detection. Floating residuals created artificial strict directions. Equivalent summation orders also created roundoff-only distinctions between nonzero tied scores.",
+  "rule": "For an official fit that returned finite parameters, when all supplied depths are exactly equal, evaluate the proven equivalent expression mean(Xg Xh)/L^2. Preserve raw-parameter-sum discrepancy in fit diagnostics. No variable-depth estimates are altered.",
+  "scope": "Numerically stable evaluation of the same CS-CORE H estimator, for both panels and both observation laws; not a tuned tie threshold or a modification of official fitting.",
+  "original_metrics_sha256": "a68c3169b06877c2f4d2de05768342c4c556b066d5698e5dd029275e34498365",
+  "original_primary_summary": "results/initial_uncanonicalized_summary.csv",
+  "constant_depth_equal_cell_evaluation": "Also evaluate equal-cell products as mean(Xg Xh) divided by the common denominator, preserving the mathematical estimator and verifying the cached raw-count replay.",
+  "direction_arithmetic_bound": "Apply to every method and both reference/query: differences <=64*float_epsilon*max(abs(score_i),abs(score_j)) are numerically unresolved. No absolute +1 floor, fitted threshold, or performance tuning."
+}

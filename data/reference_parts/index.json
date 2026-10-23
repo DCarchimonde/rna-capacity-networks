@@ -1,0 +1,21 @@
+{
+  "archives": [
+    {
+      "target": "analyses/review_completion/results/expanded_fullgraph_cellflows.npz",
+      "size_bytes": 15541636,
+      "sha256": "a61230707a2989f841c1483f85e713e077a082c85e5fe4202340bbecdced8bb7",
+      "parts": [
+        {
+          "path": "data/reference_parts/expanded_fullgraph_cellflows.npz.part01",
+          "size_bytes": 8388608,
+          "sha256": "2ee7af7c0686fada4f8c8b901f6aaefdd7f714d53bcdaa4e8f58734009fcb0f1"
+        },
+        {
+          "path": "data/reference_parts/expanded_fullgraph_cellflows.npz.part02",
+          "size_bytes": 7153028,
+          "sha256": "a27e26ad55c5dc77b91a4761635236fe86e1a406e914201ff86dd78a9ad5828e"
+        }
+      ]
+    }
+  ]
+}

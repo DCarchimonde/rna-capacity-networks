@@ -1,0 +1,75 @@
+{
+  "all_passed": true,
+  "conditional_fixture_flow_checks": 252,
+  "max_abs_conditional_error": 0.0,
+  "max_hypergeom_mass_error": 2.6020852139652106e-18,
+  "exact_unbiased_flow_equalities": 27,
+  "k3_closed_formula_verified": true,
+  "LP_flow_checks": 576,
+  "max_LP_error": 5.551115123125783e-17,
+  "second_moment_witness": [
+    {
+      "k": 1,
+      "R_A": null,
+      "R_B": null,
+      "R_A_exact": "None",
+      "R_B_exact": "None"
+    },
+    {
+      "k": 2,
+      "R_A": 0.6666666666666666,
+      "R_B": 0.6666666666666666,
+      "R_A_exact": "2/3",
+      "R_B_exact": "2/3"
+    },
+    {
+      "k": 3,
+      "R_A": 0.6846846846846847,
+      "R_B": 0.6846846846846847,
+      "R_A_exact": "76/111",
+      "R_B_exact": "76/111"
+    },
+    {
+      "k": 4,
+      "R_A": 0.6773049645390071,
+      "R_B": 0.6755083996463307,
+      "R_A_exact": "191/282",
+      "R_B_exact": "764/1131"
+    },
+    {
+      "k": 8,
+      "R_A": 0.6509174927294055,
+      "R_B": 0.6425065975971569,
+      "R_A_exact": null,
+      "R_B_exact": null
+    },
+    {
+      "k": 16,
+      "R_A": 0.6205032694931476,
+      "R_B": 0.6039587903017248,
+      "R_A_exact": null,
+      "R_B_exact": null
+    }
+  ],
+  "nonmonotone_ratio_example": {
+    "p": [
+      0.12520622631997808,
+      0.14781518513125755,
+      0.4302740144199931,
+      0.06115821110433746,
+      0.01684217870219488
+    ],
+    "k": [
+      2,
+      3,
+      4,
+      8
+    ],
+    "R": [
+      0.506982726610169,
+      0.6034292919748684,
+      0.6082264243052723,
+      0.5902617297364348
+    ]
+  }
+}

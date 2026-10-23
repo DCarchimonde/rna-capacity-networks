@@ -1,0 +1,7 @@
+{
+  "seconds": 60.73122358500041,
+  "numpy": "2.3.5",
+  "hashes": {
+    "analyses/second_round/cache/original_evaluation_cohorts.npz": "f9cd060c9c7fba391b1a19bec878bb7ebfb732e9e8584a6c91805ca43eae432b"
+  }
+}

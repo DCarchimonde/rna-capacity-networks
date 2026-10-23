@@ -1,0 +1,16 @@
+{
+  "started_utc": "2026-10-10T13:43:10.597370+00:00",
+  "finished_utc": "2026-10-10T13:43:16.560980+00:00",
+  "seconds": 5.963623815000574,
+  "cohorts": 192,
+  "cells_per_cohort": 3600,
+  "max_hypergeom_normalization_error": 1.3244613739082922e-15,
+  "methods": [
+    "exact_conditional",
+    "random_1",
+    "random_8",
+    "depth_plugin",
+    "pair_only_R2"
+  ],
+  "fixed_k": 8
+}

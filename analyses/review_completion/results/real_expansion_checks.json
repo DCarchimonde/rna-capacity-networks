@@ -1,0 +1,11 @@
+{
+  "original_23_patient_projection_exact": true,
+  "all_public_tumor_epithelial_cells_above_500": true,
+  "expanded_patients": 62,
+  "expanded_cells": 113216,
+  "all_26_rows_present": true,
+  "full_graph_edges": 24,
+  "graph_is_forest": true,
+  "integration_precision_goal": 0.0001,
+  "max_observed_patient_mc_se": 0.00013376165754004377
+}

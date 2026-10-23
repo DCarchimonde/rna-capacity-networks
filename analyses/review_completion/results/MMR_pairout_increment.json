@@ -1,0 +1,8 @@
+{
+  "AUC_difference": -0.005252100840336135,
+  "conditional_bootstrap_low": -0.027083333333333334,
+  "conditional_bootstrap_high": 0.016809835045129173,
+  "bootstrap_repetitions": 4000,
+  "scope": "Expanded 62-patient full integrin graph; fixed C=1 models",
+  "audit": "Pooled LOO AUC was excluded because it compares different class priors; LOO log loss and Brier score remain primary proper scoring rules. No graph, endpoint or model penalty was selected using AUC."
+}

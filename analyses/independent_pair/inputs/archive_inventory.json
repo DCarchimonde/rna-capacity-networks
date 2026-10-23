@@ -1,0 +1,119 @@
+{
+  "archive_sha256": "c5f7c1927be41f27778f5550de46c25b55bdabd60066b87ba4a6bd0d2c6e6b76",
+  "selected_files": [
+    "GSM5075660_p007t.tsv.gz",
+    "GSM5075662_p008t.tsv.gz",
+    "GSM5075665_p009t1.tsv.gz",
+    "GSM5075668_p012t.tsv.gz",
+    "GSM5075670_p013t.tsv.gz",
+    "GSM5075672_p014t.tsv.gz",
+    "GSM5075674_p016t.tsv.gz",
+    "GSM5075676_p017t.tsv.gz",
+    "GSM5075678_p020t.tsv.gz",
+    "GSM5075680_p021t.tsv.gz",
+    "GSM5075682_p025t.tsv.gz",
+    "GSM5075683_p026t.tsv.gz"
+  ],
+  "inventory": [
+    {
+      "member": "GSM5075659_p007n.tsv.gz",
+      "bytes": 2421896
+    },
+    {
+      "member": "GSM5075660_p007t.tsv.gz",
+      "bytes": 4473743
+    },
+    {
+      "member": "GSM5075661_p008n.tsv.gz",
+      "bytes": 2864385
+    },
+    {
+      "member": "GSM5075662_p008t.tsv.gz",
+      "bytes": 7355391
+    },
+    {
+      "member": "GSM5075663_p009n1.tsv.gz",
+      "bytes": 6381746
+    },
+    {
+      "member": "GSM5075664_p009n2.tsv.gz",
+      "bytes": 8152915
+    },
+    {
+      "member": "GSM5075665_p009t1.tsv.gz",
+      "bytes": 6908061
+    },
+    {
+      "member": "GSM5075666_p009t2.tsv.gz",
+      "bytes": 9054402
+    },
+    {
+      "member": "GSM5075667_p012n.tsv.gz",
+      "bytes": 7372830
+    },
+    {
+      "member": "GSM5075668_p012t.tsv.gz",
+      "bytes": 7684742
+    },
+    {
+      "member": "GSM5075669_p013n.tsv.gz",
+      "bytes": 6408458
+    },
+    {
+      "member": "GSM5075670_p013t.tsv.gz",
+      "bytes": 7042749
+    },
+    {
+      "member": "GSM5075671_p014n.tsv.gz",
+      "bytes": 6160270
+    },
+    {
+      "member": "GSM5075672_p014t.tsv.gz",
+      "bytes": 7410383
+    },
+    {
+      "member": "GSM5075673_p016n.tsv.gz",
+      "bytes": 7535671
+    },
+    {
+      "member": "GSM5075674_p016t.tsv.gz",
+      "bytes": 7090021
+    },
+    {
+      "member": "GSM5075675_p017n.tsv.gz",
+      "bytes": 4673927
+    },
+    {
+      "member": "GSM5075676_p017t.tsv.gz",
+      "bytes": 8611505
+    },
+    {
+      "member": "GSM5075677_p020n.tsv.gz",
+      "bytes": 2005401
+    },
+    {
+      "member": "GSM5075678_p020t.tsv.gz",
+      "bytes": 1261240
+    },
+    {
+      "member": "GSM5075679_p021n.tsv.gz",
+      "bytes": 2290656
+    },
+    {
+      "member": "GSM5075680_p021t.tsv.gz",
+      "bytes": 2593740
+    },
+    {
+      "member": "GSM5075681_p025n.tsv.gz",
+      "bytes": 1685104
+    },
+    {
+      "member": "GSM5075682_p025t.tsv.gz",
+      "bytes": 2378405
+    },
+    {
+      "member": "GSM5075683_p026t.tsv.gz",
+      "bytes": 6787354
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "purpose": "Fixed category labels preserve the original random-allocation stream across floating-point implementations.",
+  "source_component_lookup_sha256": {
+    "parity": "464dd0f31128d0fadbd7e18140cf9771b2c82a3bf4d20e5e99b36dbcd092549e",
+    "matched": "8a3fe52b6048e663e0b9ca056d8e830b5025b5a12b6d03bcf77dde1d8cee3049"
+  },
+  "group_order": "np.unique(reference_components, axis=0), lexicographic order",
+  "counts_order": "np.unique(raw_counts, axis=0)",
+  "generation_date": "2026-10-23"
+}

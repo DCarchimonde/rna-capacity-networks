@@ -1,0 +1,190 @@
+{
+  "source": "GSE166555",
+  "kind": "independent_public_source",
+  "count_layer": "Deposited nonnegative integer counts consistent with the author's spliced layer; every matched all-gene total equals nCount_spliced (and the RNA alias if listed)",
+  "denominator": "sum of all deposited gene rows per cell",
+  "metadata_sha256": "c1c6ae221df1190f468342735f8437685f709e552c36b92e2c0f87ab5543bded",
+  "manifest_sha256": "343c9313243d784973efe1fcc7b6625495e0a2159d8f3d277db0b92117fe47e6",
+  "column_map_sha256": "020ac3b9bb2ab9b364f4b413b9c12ad438cc350760182c44e19069800ff7ef0e",
+  "matrix_files": [
+    {
+      "sample": "p007t",
+      "file": "GSM5075660_p007t.tsv.gz",
+      "sha256": "643fe361c6f145a4fc99b28df8b77324cc26fa1d616c6220325379155a07f532",
+      "genes": 21854,
+      "target_rows_present": [
+        true,
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "sample": "p008t",
+      "file": "GSM5075662_p008t.tsv.gz",
+      "sha256": "80a0f06eca20ff0baac25cfbd132a68caa2807e7d2af250db9673c83cfd63c31",
+      "genes": 21854,
+      "target_rows_present": [
+        true,
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "sample": "p009t1",
+      "file": "GSM5075665_p009t1.tsv.gz",
+      "sha256": "6d97711c4f6f0f6ec2fcf6acf9ce8976ddc9adac76204d3116491b90a12543a1",
+      "genes": 21854,
+      "target_rows_present": [
+        true,
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "sample": "p012t",
+      "file": "GSM5075668_p012t.tsv.gz",
+      "sha256": "aa3a8f367a066d8b4600d049f227371419b968020c9d89519bb15bb6f30b8475",
+      "genes": 21854,
+      "target_rows_present": [
+        true,
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "sample": "p013t",
+      "file": "GSM5075670_p013t.tsv.gz",
+      "sha256": "7c5f99c11137b64c2452d2bd8ffac2385b3722260f4bc3f22aade07f4d1b4e20",
+      "genes": 21854,
+      "target_rows_present": [
+        true,
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "sample": "p014t",
+      "file": "GSM5075672_p014t.tsv.gz",
+      "sha256": "35f4ccb0d7e12622769289e0170548a46aeb86b4c59a7c6493f839ac64bee95c",
+      "genes": 21854,
+      "target_rows_present": [
+        true,
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "sample": "p016t",
+      "file": "GSM5075674_p016t.tsv.gz",
+      "sha256": "42b519926b252ac3a78b2fb369dcbbbe01e23ad6f8388f3081950c63ce878206",
+      "genes": 21854,
+      "target_rows_present": [
+        true,
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "sample": "p017t",
+      "file": "GSM5075676_p017t.tsv.gz",
+      "sha256": "8345403986da62474d256d5262b296d3efa8270c88016030670e9aa4720ecf03",
+      "genes": 21854,
+      "target_rows_present": [
+        true,
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "sample": "p020t",
+      "file": "GSM5075678_p020t.tsv.gz",
+      "sha256": "82da6f66983090af08cc025f192ed71b69029dc7233bc49a1e027b39375f4231",
+      "genes": 21854,
+      "target_rows_present": [
+        true,
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "sample": "p021t",
+      "file": "GSM5075680_p021t.tsv.gz",
+      "sha256": "3a1dbedebe2487a37b52006a54038abd85d192104455cd06ef8145cb70235ed3",
+      "genes": 21854,
+      "target_rows_present": [
+        true,
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "sample": "p025t",
+      "file": "GSM5075682_p025t.tsv.gz",
+      "sha256": "6524fc33a44fead488ea79e0e40c566b7587e4f5956c9a68d0f39c732005c752",
+      "genes": 21854,
+      "target_rows_present": [
+        true,
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "sample": "p026t",
+      "file": "GSM5075683_p026t.tsv.gz",
+      "sha256": "7eabdf970a91270d70b3da86f58e05da662c93356d39981d477085c632661304",
+      "genes": 21854,
+      "target_rows_present": [
+        true,
+        true,
+        true,
+        false,
+        true
+      ]
+    }
+  ],
+  "missing_gene_handling": "Zero storage placeholders carry a patient-by-gene presence mask; missing-edge scores are NA",
+  "exact_matching_metadata_count_layers": [
+    "nCount_spliced",
+    "nCount_RNA"
+  ],
+  "original_uploaded_sources": [
+    {
+      "filename": "GSE166555_meta_data.tsv.gz",
+      "bytes": 80927954,
+      "sha256": "4aba042a64a71507db4fad088c8a03510a50a4e9b4202b9bab8d6b07e15303d5"
+    },
+    {
+      "filename": "GSE166555_RAW.tar",
+      "bytes": 136632320,
+      "sha256": "c5f7c1927be41f27778f5550de46c25b55bdabd60066b87ba4a6bd0d2c6e6b76"
+    }
+  ],
+  "count_preparation_started_utc": "2026-10-09T18:19:00.739578+00:00",
+  "count_preparation_finished_utc": "2026-10-09T18:19:59.683051+00:00",
+  "input_gate_sha256": "b312dd826a32a824e160b4dea119005a0bb8f20a79de024b9379aaa4bf74b52a",
+  "count_layer_audit_sha256": "437ba2a84bb113f9cff8606379d841a643a37bad6304ea64f95dcacb62927ac5",
+  "preparation_core_sha256": "2951dd197cfa419e3c17c3d003945fb425aa132d5d9bf43c2f580356365d7d0a",
+  "preparation_wrapper_sha256": "9b97c46465bfae35c4b692473772ee222f0711e710e2a39f9b3bda24774a0729"
+}

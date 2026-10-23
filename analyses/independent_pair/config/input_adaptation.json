@@ -1,0 +1,15 @@
+{
+  "recorded_utc": "2026-10-09T18:16:50.665495+00:00",
+  "before_patient_H_analysis": true,
+  "trigger": "ITGB3 row absent in all 12 selected matrices; the initial all-five-gene specimen gate excluded all scores.",
+  "resolution": "Apply existing missing-gene rule to each edge. Keep ITGAV/ITGB6 primary unchanged; absent alpha-v/beta-3 scores are NA, not zero. Maintain gene-presence mask in cache and all scored roles.",
+  "unchanged": [
+    "execution_spec.json",
+    "patient/sample selection",
+    "UMI and cell thresholds",
+    "H and U formulas",
+    "seed values",
+    "bootstrap and technical replicate counts"
+  ],
+  "count_layer": "Every selected cell total equals nCount_spliced and nCount_RNA; unspliced and total-layer candidates do not match."
+}

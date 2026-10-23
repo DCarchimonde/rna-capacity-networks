@@ -1,0 +1,22 @@
+{
+  "status": "VERIFIED_GEO_HEADER_AND_DICTIONARY_BEFORE_GENE_COUNT_OPEN",
+  "cell_column": "cell_id",
+  "sample_column": "sample_id",
+  "main_type_column": "main_cell_type",
+  "minor_type_column": "minor_cell_type",
+  "epithelial_label": "Epithelial",
+  "stromal_label": "Stromal",
+  "fibro_labels": [
+    "CB FBs",
+    "UC FBs",
+    "CAFs",
+    "CCL FBs",
+    "MyoFBs 1",
+    "MyoFBs 2"
+  ],
+  "minimum_UMI": 500,
+  "verified_utc": "2026-10-09T18:13:27.617380+00:00",
+  "original_metadata_sha256": "4aba042a64a71507db4fad088c8a03510a50a4e9b4202b9bab8d6b07e15303d5",
+  "projected_metadata_sha256": "c1c6ae221df1190f468342735f8437685f709e552c36b92e2c0f87ab5543bded",
+  "canonical_patient_mapping": "manifest sample IDs; author-documented p001 alias is p007"
+}

@@ -1,0 +1,15 @@
+{
+  "exact_pairwise_marginal_checks": 112,
+  "exact_parity_resolution_checks": 28,
+  "all_labeled_3_by_3_nonempty_graphs": {
+    "matching": 33,
+    "with_wedge": 478,
+    "total": 511
+  },
+  "independent_LP_deletion_compensation_checks": 973,
+  "bivariate_probability_checks": 270,
+  "bivariate_max_absolute_error": 8.326672684688674e-16,
+  "multinomial_complete_enumeration_checks": 5,
+  "multinomial_max_absolute_error": 1.6375789613221059e-15,
+  "all_passed": true
+}

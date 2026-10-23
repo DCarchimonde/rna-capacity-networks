@@ -1,0 +1,138 @@
+{
+  "patient_count": 62,
+  "switches_2_to_500": 2,
+  "switch_patients": [
+    "C152",
+    "C154"
+  ],
+  "exact_or_numerical_ties": 0,
+  "counts": [
+    {
+      "k": 2,
+      "worst_edge": "ITGA2_ITGB1",
+      "patients": 3
+    },
+    {
+      "k": 2,
+      "worst_edge": "ITGA6_ITGB1",
+      "patients": 51
+    },
+    {
+      "k": 2,
+      "worst_edge": "ITGA6_ITGB4",
+      "patients": 8
+    },
+    {
+      "k": 8,
+      "worst_edge": "ITGA2_ITGB1",
+      "patients": 3
+    },
+    {
+      "k": 8,
+      "worst_edge": "ITGA6_ITGB1",
+      "patients": 51
+    },
+    {
+      "k": 8,
+      "worst_edge": "ITGA6_ITGB4",
+      "patients": 8
+    },
+    {
+      "k": 32,
+      "worst_edge": "ITGA2_ITGB1",
+      "patients": 3
+    },
+    {
+      "k": 32,
+      "worst_edge": "ITGA6_ITGB1",
+      "patients": 51
+    },
+    {
+      "k": 32,
+      "worst_edge": "ITGA6_ITGB4",
+      "patients": 8
+    },
+    {
+      "k": 128,
+      "worst_edge": "ITGA2_ITGB1",
+      "patients": 3
+    },
+    {
+      "k": 128,
+      "worst_edge": "ITGA6_ITGB1",
+      "patients": 51
+    },
+    {
+      "k": 128,
+      "worst_edge": "ITGA6_ITGB4",
+      "patients": 8
+    },
+    {
+      "k": 500,
+      "worst_edge": "ITGA2_ITGB1",
+      "patients": 3
+    },
+    {
+      "k": 500,
+      "worst_edge": "ITGA6_ITGB1",
+      "patients": 49
+    },
+    {
+      "k": 500,
+      "worst_edge": "ITGA6_ITGB4",
+      "patients": 10
+    }
+  ],
+  "switching_patient_details": [
+    {
+      "patient": "C152",
+      "k": 2,
+      "cells": 1077,
+      "A0": 4.174673060460637e-08,
+      "R": 0.6103783569832719,
+      "worst_edge": "ITGA6_ITGB1",
+      "second_edge": "ITGA6_ITGB4",
+      "tied_worst_edges": "ITGA6_ITGB1",
+      "number_tied": 1,
+      "normalized_margin": 0.010513624682153958
+    },
+    {
+      "patient": "C152",
+      "k": 500,
+      "cells": 1077,
+      "A0": 1.786121785152631e-05,
+      "R": 0.6343314511620446,
+      "worst_edge": "ITGA6_ITGB4",
+      "second_edge": "ITGA6_ITGB1",
+      "tied_worst_edges": "ITGA6_ITGB4",
+      "number_tied": 1,
+      "normalized_margin": 0.017325474398258038
+    },
+    {
+      "patient": "C154",
+      "k": 2,
+      "cells": 1911,
+      "A0": 4.1685551967637005e-08,
+      "R": 0.641610569059925,
+      "worst_edge": "ITGA6_ITGB1",
+      "second_edge": "ITGA6_ITGB4",
+      "tied_worst_edges": "ITGA6_ITGB1",
+      "number_tied": 1,
+      "normalized_margin": 0.014348092989150366
+    },
+    {
+      "patient": "C154",
+      "k": 500,
+      "cells": 1911,
+      "A0": 1.8124111040466587e-05,
+      "R": 0.6592281796959741,
+      "worst_edge": "ITGA6_ITGB4",
+      "second_edge": "ITGA6_ITGB1",
+      "tied_worst_edges": "ITGA6_ITGB4",
+      "number_tied": 1,
+      "normalized_margin": 0.013863254527389728
+    }
+  ],
+  "source_sha256": "a61230707a2989f841c1483f85e713e077a082c85e5fe4202340bbecdced8bb7",
+  "interpretation": "conditional on the observed cells and stored integration; descriptive edge identity, not a test of biological function"
+}

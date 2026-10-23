@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-19",
+  "changes": [
+    {
+      "stage": "after nearest-literature review, before real-data decomposition",
+      "change": "Replace the initial degree-2/3/4 truncation direction with a complete-bivariate comparator and a graph-sufficiency theorem. Molecular degree alone did not isolate the number of involved genes."
+    },
+    {
+      "stage": "after initial five-patient numerical refinement",
+      "change": "Use fresh seeds with 16384 draws per batch for C169 and C168, 1024 for C132/C171/C156, each with 32 batches. Two original close inversions disappeared; full26 R2-to-R500 inversions changed from 121 to 119, and the subset requiring shared capacity from 78 to 76."
+    },
+    {
+      "stage": "after initial sparse Wald simulation",
+      "change": "Use exchangeable-label Monte Carlo permutation tests as the primary detection analysis, retaining the Wald results as a diagnostic. The initial Wald test showed inflated rejection in some small-sample settings."
+    }
+  ],
+  "data_status": "All CRC data had already been analyzed; none of this reanalysis is a newly held-out confirmation."
+}

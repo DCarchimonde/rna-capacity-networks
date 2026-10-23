@@ -1,0 +1,22 @@
+{
+  "official_python_repository": "https://github.com/ChangSuBiostats/CS-CORE_python",
+  "commit": "a0ff49d46c031a77da1a8b76942155d24c7b808e",
+  "file_git_blob": "8dd091cc97f4c668fb82e1eeb8f10018bef8ae16",
+  "paper": "https://doi.org/10.1038/s41467-023-40503-7",
+  "current_R_docs": "https://changsubiostats.github.io/CS-CORE/articles/CSCORE.html",
+  "R_doc_version": "1.1.0",
+  "audited_R_files": [
+    {
+      "path": "R/CSCORE_IRLS.R",
+      "git_blob": "3802574d0adc3ed483e53064105f8b4f06d00ce7"
+    },
+    {
+      "path": "R/CSCORE_IRLS_base.R",
+      "git_blob": "fccc6e4a68143b6dea4feb6cca333ec1caeed643"
+    }
+  ],
+  "executed": "official Python CSCORE_IRLS; no official R run",
+  "official_source_changes": "none",
+  "compatibility": "module-local np.Inf alias; target conversion and numerical identity described separately",
+  "functional_rarefaction_reference": "https://doi.org/10.1111/j.2007.0030-1299.16171.x"
+}

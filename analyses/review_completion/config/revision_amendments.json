@@ -1,0 +1,11 @@
+{
+  "study_status": "Exploratory computational revision; not preregistered",
+  "initial_grid": "analysis_spec.json was written before the corresponding new experiment outputs",
+  "additional_power_experiment": "Added an independent A/A calibration and held-out A/B evaluation after observing the descriptive sparse-grid errors; a separate seed and simulated samples are used",
+  "numerical_refinement": "After pilot integration showed excessive computational variance for some patients, added exact integration for support products <=4096 and patient-specific draw budgets; every final estimate uses draws independent of the budget-setting pilot",
+  "precision_goal": "Aim for score MC SE of order 1e-4; report every measured SE rather than declaring a hard tolerance certificate",
+  "phenotype_models": "Fixed C=1 logistic models; no endpoint, gene graph or penalty tuning against MMR performance; basic clinical covariates were specified before phenotype-model execution",
+  "auc_evaluation": "Pooled LOO AUC showed a training-class-prior artifact. LOO log loss and Brier score were retained. Interpretation uses leave-pair-out AUC from a common model for each held-out opposite-status pair",
+  "bootstrap_scope": "Patient bootstrap for fixed CV predictions; within-patient cell bootstrap for individual score intervals; Monte Carlo batches for integration precision",
+  "negative_results_retained": true
+}

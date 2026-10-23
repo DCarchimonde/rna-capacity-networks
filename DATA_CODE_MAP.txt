@@ -1,0 +1,52 @@
+DATA AND CODE MAP
+
+SCIENTIFIC MODULES
+analyses/independent_pair/
+  GSE166555 count preparation, same-cell H and cross-cell U, repeatability,
+  patient intervals and epithelial-subtype decomposition.
+analyses/molecular_resolution/
+  Fixed-k targets, exact conditional-flow kernels, graph examples, controlled
+  simulations and patient resolution spectra.
+analyses/strong_comparators/
+  Exact R8 multinomial plug-in and pinned CS-CORE implementation. Native fit
+  failures and convergence are recorded; hybrid replacement is a separate
+  sensitivity analysis. The original third-party licence is in vendor/LICENSE.
+analyses/review_completion/
+  Occupancy-stratified integration for the 26-gene graph; sparse, near-tie,
+  threshold and background analyses; patient intervals and held-out MMR models.
+  inputs/ contains the complete atlas projection.
+analyses/motif_extension/
+  Bivariate-sufficiency checks, independent-edge integration, shared-capacity
+  decomposition, numerical refinement and fixed-bivariate simulations. The
+  Wald output is diagnostic; permutation results provide primary detection.
+analyses/second_round/
+  Paired D_G/R500 permutation analysis, deletion-edge identities and sparse-bound
+  enumeration. cache/ contains fixed evaluation counts and component lookups.
+  inputs/permutation_groups.npz fixes the original randomization categories.
+integration/propagate_refinement.py
+  Applies the final fixed refinement to full-graph scores and thresholds.
+analysis/review_diagnostics.py
+  Depth, occupancy and native CS-CORE comparisons on common converged patients.
+scripts/verify_equations_independent.py
+  Separate rational and symbolic checks of graph and sampling identities.
+scripts/check_results.py
+  Count identity, component aggregation and manuscript-result consistency.
+
+FINAL FIGURES
+Figure_1.pdf, Figure_2.pdf, Figure_3.pdf
+  scripts/make_figures.py
+Figure_4.pdf, Figure_S4.pdf
+  integration/make_current_figures.py
+Figure_5.pdf, Figure_6.pdf, Figure_S1.pdf, Figure_S2.pdf, Figure_S3.pdf
+  analyses/review_completion/scripts/make_figures.py
+competition_components.pdf, parity_detection.pdf
+  analyses/motif_extension/scripts/make_figures.py
+
+Figures use canonical results, data/ and review/. source_data/ supplies
+manuscript-facing table copies. source_data_map.json identifies each origin;
+scripts/sync_tables.py refreshes them. patient_cell_counts.csv is calculated
+directly from the two count projections.
+
+Dated specifications and amendments retain scientific choices, such as seeds,
+failed-fit handling and numerical refinement. They are execution records,
+not additional manuscript or software versions.

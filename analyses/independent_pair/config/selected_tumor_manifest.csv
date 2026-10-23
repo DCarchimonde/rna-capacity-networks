@@ -1,0 +1,14 @@
+patient_id,sample_id,sample_accession,file_name,selected,selection_reason
+p007,p007t,GSM5075660,GSM5075660_p007t.tsv.gz,1,Single original tumor specimen
+p008,p008t,GSM5075662,GSM5075662_p008t.tsv.gz,1,Single original tumor specimen
+p009,p009t1,GSM5075665,GSM5075665_p009t1.tsv.gz,1,Lower accession per fixed rule; lesion relationship unresolved
+p009,p009t2,GSM5075666,GSM5075666_p009t2.tsv.gz,0,Lower accession per fixed rule; lesion relationship unresolved
+p012,p012t,GSM5075668,GSM5075668_p012t.tsv.gz,1,Single original tumor specimen
+p013,p013t,GSM5075670,GSM5075670_p013t.tsv.gz,1,Single original tumor specimen
+p014,p014t,GSM5075672,GSM5075672_p014t.tsv.gz,1,Single original tumor specimen
+p016,p016t,GSM5075674,GSM5075674_p016t.tsv.gz,1,Single original tumor specimen
+p017,p017t,GSM5075676,GSM5075676_p017t.tsv.gz,1,Single original tumor specimen
+p020,p020t,GSM5075678,GSM5075678_p020t.tsv.gz,1,Single original tumor specimen
+p021,p021t,GSM5075680,GSM5075680_p021t.tsv.gz,1,Single original tumor specimen
+p025,p025t,GSM5075682,GSM5075682_p025t.tsv.gz,1,Single original tumor specimen
+p026,p026t,GSM5075683,GSM5075683_p026t.tsv.gz,1,Single original tumor specimen

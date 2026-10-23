@@ -1,0 +1,167 @@
+{
+  "D_source_epithelial": {
+    "cells": 113216,
+    "minimum_depth": 501,
+    "below_500": 0
+  },
+  "I_source_epithelial": {
+    "cells": 11442,
+    "minimum_depth": 578,
+    "below_500": 0
+  },
+  "expanded_graphs": [
+    {
+      "graph": "common4",
+      "patients": 62,
+      "pairs": 1891,
+      "R2_R500_inversions": 61,
+      "R2_min": 0.0251247292261443,
+      "R2_max": 0.5345911281985848,
+      "R500_min": 0.0265145885432833,
+      "R500_max": 0.6199491064114003,
+      "median_R500_minus_R2": 0.003933909947859651,
+      "maximum_absolute_difference": 0.09227538584099759
+    },
+    {
+      "graph": "integrin26",
+      "patients": 62,
+      "pairs": 1891,
+      "R2_R500_inversions": 119,
+      "R2_min": 0.4325430146527424,
+      "R2_max": 0.75616597166813,
+      "R500_min": 0.4458382604095229,
+      "R500_max": 0.767223037763958,
+      "median_R500_minus_R2": 0.022659033154818264,
+      "maximum_absolute_difference": 0.05792409440867974
+    },
+    {
+      "graph": "selected5",
+      "patients": 62,
+      "pairs": 1891,
+      "R2_R500_inversions": 61,
+      "R2_min": 0.0251247292261443,
+      "R2_max": 0.5345911281985848,
+      "R500_min": 0.0265145885432833,
+      "R500_max": 0.6199491064114003,
+      "median_R500_minus_R2": 0.003946651945607602,
+      "maximum_absolute_difference": 0.0923240028294118
+    }
+  ],
+  "depth_threshold_changes": [
+    {
+      "cohort": "D_expanded",
+      "graph": "common4",
+      "threshold": 1000,
+      "inversions": 71,
+      "pairs": 1891,
+      "maximum_absolute_score_change": 0.1230530335899724,
+      "mean_patient_retained_fraction": 0.935929633772784
+    },
+    {
+      "cohort": "D_expanded",
+      "graph": "common4",
+      "threshold": 2000,
+      "inversions": 189,
+      "pairs": 1891,
+      "maximum_absolute_score_change": 0.3472030176216989,
+      "mean_patient_retained_fraction": 0.8345418934236067
+    },
+    {
+      "cohort": "D_expanded",
+      "graph": "integrin26",
+      "threshold": 1000,
+      "inversions": 101,
+      "pairs": 1891,
+      "maximum_absolute_score_change": 0.06006446746007299,
+      "mean_patient_retained_fraction": 0.935929633772784
+    },
+    {
+      "cohort": "D_expanded",
+      "graph": "integrin26",
+      "threshold": 2000,
+      "inversions": 220,
+      "pairs": 1891,
+      "maximum_absolute_score_change": 0.10088733437616126,
+      "mean_patient_retained_fraction": 0.8345418934236067
+    },
+    {
+      "cohort": "I",
+      "graph": "common4",
+      "threshold": 1000,
+      "inversions": 6,
+      "pairs": 66,
+      "maximum_absolute_score_change": 0.1118149129784064,
+      "mean_patient_retained_fraction": 0.9322613808492229
+    },
+    {
+      "cohort": "I",
+      "graph": "common4",
+      "threshold": 2000,
+      "inversions": 11,
+      "pairs": 66,
+      "maximum_absolute_score_change": 0.3371038069558362,
+      "mean_patient_retained_fraction": 0.7129449258961053
+    }
+  ],
+  "panel_coverage": [
+    {
+      "cohort": "D",
+      "n": 2,
+      "retained_cells": 62599,
+      "total_cells": 113216,
+      "pooled_cell_coverage": 0.5529165488976823,
+      "median_patient_coverage": 0.5304127145581691,
+      "zero_eligible_patients": 0
+    },
+    {
+      "cohort": "D",
+      "n": 4,
+      "retained_cells": 43271,
+      "total_cells": 113216,
+      "pooled_cell_coverage": 0.38219862916902203,
+      "median_patient_coverage": 0.32860525258353335,
+      "zero_eligible_patients": 0
+    },
+    {
+      "cohort": "D",
+      "n": 8,
+      "retained_cells": 23535,
+      "total_cells": 113216,
+      "pooled_cell_coverage": 0.20787697851893724,
+      "median_patient_coverage": 0.12355902166317259,
+      "zero_eligible_patients": 0
+    },
+    {
+      "cohort": "I",
+      "n": 2,
+      "retained_cells": 3192,
+      "total_cells": 11442,
+      "pooled_cell_coverage": 0.27897220765600417,
+      "median_patient_coverage": 0.29720356853203567,
+      "zero_eligible_patients": 0
+    },
+    {
+      "cohort": "I",
+      "n": 4,
+      "retained_cells": 1099,
+      "total_cells": 11442,
+      "pooled_cell_coverage": 0.09604964167103654,
+      "median_patient_coverage": 0.08907865168539325,
+      "zero_eligible_patients": 0
+    },
+    {
+      "cohort": "I",
+      "n": 8,
+      "retained_cells": 216,
+      "total_cells": 11442,
+      "pooled_cell_coverage": 0.018877818563188254,
+      "median_patient_coverage": 0.01202777777777775,
+      "zero_eligible_patients": 0
+    }
+  ],
+  "checks": {
+    "every_score_finite": true,
+    "every_score_in_unit_interval": true,
+    "every_source_matched_original_counts": true
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "source": "GSE178341",
+  "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE178nnn/GSE178341/suppl/GSE178341_crc10x_full_c295v4_submit.h5",
+  "sha256": "f435bb2651ff5297d0c24a99daf58850ed67ae1ed6c5ef05fad48fa3f0186670",
+  "bytes": 1203550558,
+  "cells": 370115,
+  "features": 43113,
+  "integrin_genes": [
+    "ITGA1",
+    "ITGA2",
+    "ITGA3",
+    "ITGA4",
+    "ITGA5",
+    "ITGA6",
+    "ITGA7",
+    "ITGA8",
+    "ITGA9",
+    "ITGA10",
+    "ITGA11",
+    "ITGAV",
+    "ITGAL",
+    "ITGAM",
+    "ITGAX",
+    "ITGAD",
+    "ITGA2B",
+    "ITGAE",
+    "ITGB1",
+    "ITGB2",
+    "ITGB3",
+    "ITGB4",
+    "ITGB5",
+    "ITGB6",
+    "ITGB7",
+    "ITGB8"
+  ],
+  "edges": [
+    [
+      "ITGA1",
+      "ITGB1"
+    ],
+    [
+      "ITGA2",
+      "ITGB1"
+    ],
+    [
+      "ITGA3",
+      "ITGB1"
+    ],
+    [
+      "ITGA4",
+      "ITGB1"
+    ],
+    [
+      "ITGA5",
+      "ITGB1"
+    ],
+    [
+      "ITGA6",
+      "ITGB1"
+    ],
+    [
+      "ITGA7",
+      "ITGB1"
+    ],
+    [
+      "ITGA8",
+      "ITGB1"
+    ],
+    [
+      "ITGA9",
+      "ITGB1"
+    ],
+    [
+      "ITGA10",
+      "ITGB1"
+    ],
+    [
+      "ITGA11",
+      "ITGB1"
+    ],
+    [
+      "ITGAV",
+      "ITGB1"
+    ],
+    [
+      "ITGAL",
+      "ITGB2"
+    ],
+    [
+      "ITGAM",
+      "ITGB2"
+    ],
+    [
+      "ITGAX",
+      "ITGB2"
+    ],
+    [
+      "ITGAD",
+      "ITGB2"
+    ],
+    [
+      "ITGAV",
+      "ITGB3"
+    ],
+    [
+      "ITGA2B",
+      "ITGB3"
+    ],
+    [
+      "ITGA6",
+      "ITGB4"
+    ],
+    [
+      "ITGAV",
+      "ITGB5"
+    ],
+    [
+      "ITGAV",
+      "ITGB6"
+    ],
+    [
+      "ITGA4",
+      "ITGB7"
+    ],
+    [
+      "ITGAE",
+      "ITGB7"
+    ],
+    [
+      "ITGAV",
+      "ITGB8"
+    ]
+  ],
+  "all_nonzero_values_integer": true,
+  "denominator": "sum of all 43113 author feature rows; no normalization",
+  "extraction_seconds": 64.45353961900037
+}

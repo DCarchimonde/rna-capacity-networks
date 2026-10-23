@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "Please cite this software and the accompanying manuscript when using these analyses."
+type: software
+title: "When pairwise expression is insufficient for RNA capacity networks: code and data"
+authors:
+  - family-names: Tong
+    given-names: Siyuan
+  - family-names: Wang
+    given-names: Yuxuan
+version: 1.0.0
+date-released: 2026-10-23
+repository-code: "https://github.com/DCarchimonde/rna-capacity-networks"
+url: "https://github.com/DCarchimonde/rna-capacity-networks"
+license: MIT
+keywords:
+  - RNA capacity networks
+  - molecular occupancy
+  - single-cell RNA sequencing
+  - reproducible research

@@ -1,0 +1,7 @@
+graph,genes,edges,k,integrand_states,all_deletion_evaluations,seconds,full_enumeration_states,operation
+integrin_forest,26,24,128,120,3000,0.00011517900020407978,198676718149991520679988027049,intact and all edge-deleted flow for sampled count states; not full expectation integration
+integrin_forest,26,24,500,120,3000,7.37390000722371e-05,73659368740576150702849091419319488698964896,intact and all edge-deleted flow for sampled count states; not full expectation integration
+cyclic_bipartite,20,30,128,120,3720,0.6607478030000493,2724778306938511092790521,intact and all edge-deleted flow for sampled count states; not full expectation integration
+cyclic_bipartite,20,30,500,120,3720,0.6140103920006368,593247822539160779675822184901229376,intact and all edge-deleted flow for sampled count states; not full expectation integration
+cyclic_bipartite,50,75,128,120,9120,1.5882174559992563,531631765677694504644655847071218594650608821,intact and all edge-deleted flow for sampled count states; not full expectation integration
+cyclic_bipartite,50,75,500,120,9120,1.658951427001739,344641719603005147150840373859389920786352541971174446918672861429045856,intact and all edge-deleted flow for sampled count states; not full expectation integration

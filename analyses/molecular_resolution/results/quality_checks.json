@@ -1,0 +1,20 @@
+{
+  "verified_utc": "2026-10-10T14:16:43.082108+00:00",
+  "input_hashes_match": true,
+  "source_compiles_python": true,
+  "theory_checks_passed": true,
+  "cohort_checks_passed": true,
+  "key_patient_pair_counts_verified": true,
+  "simulation_shape_verified": true,
+  "canonical_second_moment_R2_truth_is_tied": true,
+  "figures": {
+    "count": 3,
+    "formats": [
+      "png",
+      "svg",
+      "pdf"
+    ],
+    "visual_review": "Inspected all three PNGs; all panels, captions, points and axis labels readable."
+  },
+  "changes_after_simulation": "Canonicalized exact ties only in the descriptive R2 truth column; R8 targets, generated counts and evaluation tables unchanged."
+}

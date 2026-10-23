@@ -1,0 +1,135 @@
+{
+  "created_before_numerical_execution_utc": "2026-10-10T14:35:17.979183+00:00",
+  "question": "What remains beyond a strong co-expression estimator when the RNA target is held fixed?",
+  "stage": "Both CRC sources are previously exposed; this new method comparison is exploratory.",
+  "genes": [
+    "ITGA5",
+    "ITGAV",
+    "ITGB1",
+    "ITGB3",
+    "ITGB6"
+  ],
+  "edges": [
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      1,
+      4
+    ]
+  ],
+  "primary_target": "H_vd = equal-type average of equal-cell E[P_ITGAV P_ITGB6]",
+  "secondary_target": "R2=1-max(edge H)/sum(edge H); full4 in D and simulations, common3 in D/I",
+  "official_comparator": {
+    "repository": "https://github.com/ChangSuBiostats/CS-CORE_python",
+    "commit": "a0ff49d46c031a77da1a8b76942155d24c7b808e",
+    "path": "CSCORE/CSCORE_IRLS.py",
+    "source_sha256": "400b6dc76bb1a6a4b972a4a607ba7382f12f9d71e9c9d6a3c9ff550029c489e6",
+    "function": "CSCORE_IRLS",
+    "same_target_conversion": "raw mu[g]*mu[h]+raw covar[g,h], not processed correlation",
+    "parameter_capture": "Python return-event tracing; official file is unchanged",
+    "numpy_compatibility": "module-local facade supplies np.Inf=np.inf; no arithmetic changes",
+    "version_scope": "Official Python publication implementation; current R 1.1.0 docs also inspected, not claimed to have been run",
+    "panels": [
+      "all present graph genes",
+      "primary ITGAV/ITGB6 pair"
+    ],
+    "zero_count_selection": "Exclude genes with zero total observed count within the fitted sample; complete their measured H edges at zero. Missing source genes remain unavailable.",
+    "negative_H": "Retain raw estimates; separately project to H>=0 for constrained graph use.",
+    "failure_handling": "Report native failures and all-pair coverage. Practical comparator uses equal-cell moments for nonfinite/failed edge estimates, with projection of finite estimates to H>=0. Never remove failed patients from the denominator.",
+    "convergence": "Record j and actual final delta; preserve the official returned estimates even if delta exceeds tolerance."
+  },
+  "methods": [
+    "equal_cell_moment",
+    "samecell_fraction",
+    "CSCORE_graph_raw",
+    "CSCORE_graph_projected",
+    "CSCORE_graph_fallback",
+    "CSCORE_pair_fallback"
+  ],
+  "same_input_budget": "Same patients, cell-type subsets, selected raw UMI counts and full-RNA depth; no additional biological observations.",
+  "multinomial_estimator": "mean Xg Xh/[L(L-1)]",
+  "poisson_estimator": "mean Xg Xh/S^2 with a common supplied, known exposure S; do not use S(S-1) for Poisson counts",
+  "original_simulation": {
+    "plan_path": "inputs/original_H_experiment_plan.json",
+    "source_plan_sha256": "07415b428ccdf23b15c57ac9a26aee2b2162df05555083bafc35b650c4119496",
+    "cohorts": 768,
+    "replay": "Exactly replay the original raw-count RNG sequence; verify source snapshots for every case and cached equal-cell H scores.",
+    "strata": "4 families x 2 signal types x 3 depth designs x 32 cohorts",
+    "state_dependent_depth": "Model stress test: equal-cell joint target remains fixed; homogeneous moment regressions need not target that equal-cell population."
+  },
+  "additional_poisson_control": {
+    "cohorts": 384,
+    "replicates_per_case": 16,
+    "seed_base": 2610109200,
+    "families": [
+      "coupling_only",
+      "mean_only",
+      "opposing",
+      "null"
+    ],
+    "signal_types": [
+      "Epi",
+      "Fibro"
+    ],
+    "depth_designs": [
+      "constant_1000",
+      "independent_variable",
+      "state_dependent"
+    ],
+    "measurement": "Independent gene-wise Poisson(S*P) conditional on latent state. The same known S is supplied to both estimators.",
+    "independent_variable": "Per-cell iid log-uniform exposure 1000..16000, independent of latent state.",
+    "state_dependent": "S=[8000,16000,2000,2000,2000] indexed by the latent state; explicit misspecification test.",
+    "patients": 23,
+    "cells_per_type": [
+      200,
+      100
+    ],
+    "latent_population": "Exactly the original five-state constructor; truth uses its known equal-cell weights.",
+    "null": "Truth-identical patients; directional accuracy is undefined, so report bias/RMSE and estimated resolution."
+  },
+  "real_data": {
+    "D_sha256": "15f16a17da11a8b4d3bbc403b15fffd9cc8a51ba2e79a789ed04620be501f044",
+    "I_sha256": "25884937355803b84a282ac11510deeee6942726af8b357477d7c551c67a2ee3",
+    "minimum_UMI": 500,
+    "minimum_Epi": 100,
+    "minimum_Fibro": 30,
+    "cell_splits": 20,
+    "cell_split_seed_base": 4402000,
+    "UMI_draws": 100,
+    "q": 0.5,
+    "UMI_seed_base": 261009890,
+    "patient_bootstrap": 2000,
+    "patient_bootstrap_seed": 2610109291,
+    "scopes": [
+      "Epi",
+      "Fibro",
+      "balanced"
+    ],
+    "primary_scope": "Epi",
+    "interpretation": "Real data have no latent H truth; technical direction retention is repeatability, not accuracy.",
+    "missing_ITGB3": "I uses common3; missing gene is never an observed zero."
+  },
+  "metrics": {
+    "simulation_primary": "Strict correct directions among all known true-distinct patient pairs; ties or failed fits unsuccessful.",
+    "also": "H bias, RMSE, mean absolute error; R2 error/directions; fit status and negative estimates.",
+    "paired_intervals": "Resample independent simulation cohorts within each case; equal case weights; 5000 draws, seed 2610109292.",
+    "real_intervals": "Descriptive paired patient bootstrap, common patient resamples across methods; technical repetitions do not increase patient N.",
+    "success_rule": "No universal superiority threshold; report favorable, equal and unfavorable same-target results by measurement/depth stratum."
+  },
+  "Rk_comparator": {
+    "exact_rarefaction": "Classical complete subset U-statistic is identical to our conditional hypergeometric estimator; verify by direct subset enumeration.",
+    "Monte_Carlo": "Prior one/eight subset randomized baselines already share R8; reuse those results with source hashes.",
+    "strong_addition": "Exact fixed-k multinomial plug-in using each observed X/L, without Monte Carlo. Compare at k=8 on the same counts and cohorts.",
+    "claim_scope": "Graph resolution target and identities are the candidate contribution. Rao-Blackwellization and U-statistics themselves are established techniques."
+  }
+}

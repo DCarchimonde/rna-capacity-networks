@@ -1,0 +1,229 @@
+{
+  "created_before_execution_utc": "2026-10-09T14:00:16.413236+00:00",
+  "project": "CRC Reliability v3",
+  "question": "Do marginal means identify cell-local RNA flow resilience and same-cell RNA coavailability patient orders?",
+  "stage": "New estimand/identifiability development experiment; not an independent cohort confirmation.",
+  "genes": [
+    "ITGA5",
+    "ITGAV",
+    "ITGB1",
+    "ITGB3",
+    "ITGB6"
+  ],
+  "edges": [
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      1,
+      4
+    ]
+  ],
+  "patients_per_cohort": 23,
+  "cells_per_type": [
+    200,
+    100
+  ],
+  "scale": 0.0002,
+  "cases": [
+    {
+      "family": "coupling_only",
+      "signal_type": "Epi",
+      "depth_design": "low"
+    },
+    {
+      "family": "coupling_only",
+      "signal_type": "Epi",
+      "depth_design": "high"
+    },
+    {
+      "family": "coupling_only",
+      "signal_type": "Epi",
+      "depth_design": "state_dependent"
+    },
+    {
+      "family": "coupling_only",
+      "signal_type": "Fibro",
+      "depth_design": "low"
+    },
+    {
+      "family": "coupling_only",
+      "signal_type": "Fibro",
+      "depth_design": "high"
+    },
+    {
+      "family": "coupling_only",
+      "signal_type": "Fibro",
+      "depth_design": "state_dependent"
+    },
+    {
+      "family": "mean_only",
+      "signal_type": "Epi",
+      "depth_design": "low"
+    },
+    {
+      "family": "mean_only",
+      "signal_type": "Epi",
+      "depth_design": "high"
+    },
+    {
+      "family": "mean_only",
+      "signal_type": "Epi",
+      "depth_design": "state_dependent"
+    },
+    {
+      "family": "mean_only",
+      "signal_type": "Fibro",
+      "depth_design": "low"
+    },
+    {
+      "family": "mean_only",
+      "signal_type": "Fibro",
+      "depth_design": "high"
+    },
+    {
+      "family": "mean_only",
+      "signal_type": "Fibro",
+      "depth_design": "state_dependent"
+    },
+    {
+      "family": "opposing",
+      "signal_type": "Epi",
+      "depth_design": "low"
+    },
+    {
+      "family": "opposing",
+      "signal_type": "Epi",
+      "depth_design": "high"
+    },
+    {
+      "family": "opposing",
+      "signal_type": "Epi",
+      "depth_design": "state_dependent"
+    },
+    {
+      "family": "opposing",
+      "signal_type": "Fibro",
+      "depth_design": "low"
+    },
+    {
+      "family": "opposing",
+      "signal_type": "Fibro",
+      "depth_design": "high"
+    },
+    {
+      "family": "opposing",
+      "signal_type": "Fibro",
+      "depth_design": "state_dependent"
+    },
+    {
+      "family": "null",
+      "signal_type": "Epi",
+      "depth_design": "low"
+    },
+    {
+      "family": "null",
+      "signal_type": "Epi",
+      "depth_design": "high"
+    },
+    {
+      "family": "null",
+      "signal_type": "Epi",
+      "depth_design": "state_dependent"
+    },
+    {
+      "family": "null",
+      "signal_type": "Fibro",
+      "depth_design": "low"
+    },
+    {
+      "family": "null",
+      "signal_type": "Fibro",
+      "depth_design": "high"
+    },
+    {
+      "family": "null",
+      "signal_type": "Fibro",
+      "depth_design": "state_dependent"
+    }
+  ],
+  "independent_cohorts_per_case": 32,
+  "cohorts_total": 768,
+  "seed_base": 261009730,
+  "patient_coordinate": "independent random permutation of linspace(0,1,23) in every cohort",
+  "population": "Each signal type is a rho mixture of a homogeneous state and four equally weighted segregated states, preserving all five marginal means. Other type homogeneous.",
+  "parameters": {
+    "coupling_only": "rho=0.1+0.8*x; delta=0",
+    "mean_only": "rho=0.4; delta=0.8*x",
+    "opposing": "rho=0.1+0.8*x; delta=0.8*x",
+    "null": "rho=0.4; delta=0.4"
+  },
+  "UMI_depths": {
+    "low": 1000,
+    "high": 16000,
+    "state_dependent": [
+      8000,
+      16000,
+      2000,
+      2000,
+      2000
+    ]
+  },
+  "measurement": "Independent multinomial target counts plus all-other-gene bin; depths known and may depend on cell state.",
+  "primary_target": "H(ITGAV,ITGB6) = 0.5 E_E[p_v*p_d]+0.5 E_F[p_v*p_d], not a protein quantity.",
+  "H_estimators": [
+    "mixed_means",
+    "typed_means",
+    "typed_crosscell",
+    "cell_fraction_product",
+    "cell_factorial"
+  ],
+  "primary_candidate": "cell_factorial",
+  "primary_comparator": "typed_crosscell",
+  "primary_families": [
+    "coupling_only",
+    "opposing"
+  ],
+  "primary_endpoint": "Strictly correct directions over all 253 true-distinct patient pairs; estimated ties unsuccessful.",
+  "primary_CI": "Equal-case paired means across 6 strata per family; stratified Welch df; Bonferroni 95% for 2 contrasts.",
+  "primary_success_rule": "Both family strict-direction gains >=0.10 and both simultaneous lower limits >0. No tuning if not met.",
+  "secondary": "All four H edges, all 5 estimators, R_pool/typed/observed-cell against cell-local population R, analytical pooled-vs-local order and Jensen gaps, null resolution.",
+  "local_R_definition": "min_e (0.5 E_E[F_minus_e]+0.5 E_F[F_minus_e]) / (0.5 E_E[F0]+0.5 E_F[F0]); one global edge deletion, not per-cell adaptive deletion.",
+  "theory": "Construct explicit same-mean populations with different local_R; derive concavity hierarchy separately for all five graph states; ratio itself has no Jensen sign.",
+  "development_data": {
+    "counts_sha256": "15f16a17da11a8b4d3bbc403b15fffd9cc8a51ba2e79a789ed04620be501f044",
+    "patients": 23,
+    "source": "Previously exposed GSE178341 D eligible counts; no new biological patients.",
+    "splits": 20,
+    "split_seed_base": 4402000,
+    "UMI_retention": 0.5,
+    "UMI_draws": 100,
+    "UMI_seed_base": 261009890,
+    "patient_bootstrap": 2000,
+    "patient_bootstrap_seed": 261009891,
+    "targets": "All four coavailability edges; all pooling levels for flow; covariance H minus unbiased cross-cell product at each type.",
+    "primary_viability": "ITGAV/ITGB6 same-cell H average split all-pair retention >=0.65 and reference resolution >=0.90; mean Epi within-type covariance patient-bootstrap 95% excludes 0.",
+    "interpretation": "A viability screen of this exposed D cohort, not a claim of independent validity; observed cell flow includes multinomial Jensen bias."
+  },
+  "forbidden_substitutions": [
+    "No empirical observed-cell flow is labeled latent local flow.",
+    "No factorial moment is labeled a new estimator invented here.",
+    "No H estimator comparison is described as improving the original mixed-mean R target."
+  ],
+  "original_main_unchanged": {
+    "q": 0.5,
+    "w": 0.5,
+    "comparison": "R versus Gnorm"
+  },
+  "V1_V2_expression_opened": false,
+  "PROTOCOL_LOCK": false
+}

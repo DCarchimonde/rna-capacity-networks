@@ -1,0 +1,38 @@
+{
+  "started_utc": "2026-10-10T13:41:09.224050+00:00",
+  "finished_utc": "2026-10-10T13:41:10.688160+00:00",
+  "status": "post-replication exploratory fixed-resolution calculation",
+  "checks": [
+    {
+      "cohort": "D",
+      "graph": "full4",
+      "cells": 58654,
+      "seconds": 0.7041599510002925,
+      "max_probability_mass_error": 1.042811778768915e-12,
+      "k2_vs_factorial_max_error": 2.236166980751353e-19,
+      "minimum_flow_increment": 0.0,
+      "max_conditional_Jensen_violation": 0.0
+    },
+    {
+      "cohort": "D",
+      "graph": "common3",
+      "cells": 58654,
+      "seconds": 0.5962445360000856,
+      "max_probability_mass_error": 1.042811778768915e-12,
+      "k2_vs_factorial_max_error": 2.236166980751353e-19,
+      "minimum_flow_increment": 0.0,
+      "max_conditional_Jensen_violation": 0.0
+    },
+    {
+      "cohort": "I",
+      "graph": "common3",
+      "cells": 12746,
+      "seconds": 0.13302404499972909,
+      "max_probability_mass_error": 7.624505410711024e-14,
+      "k2_vs_factorial_max_error": 5.209252625613947e-20,
+      "minimum_flow_increment": 0.0,
+      "max_conditional_Jensen_violation": 0.0
+    }
+  ],
+  "all_checks_passed": true
+}

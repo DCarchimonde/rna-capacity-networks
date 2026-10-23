@@ -1,0 +1,28 @@
+{
+  "checked_utc": "2026-10-09T18:37:04.750396+00:00",
+  "cohorts": [
+    {
+      "accession": "GSE166555",
+      "role": "Independent",
+      "original_patients": 12,
+      "publication_doi": "10.15252/emmm.202114123",
+      "clinical_origin": "Charité University Hospital Berlin; original previously untreated primary surgery cohort",
+      "evidence_urls": [
+        "https://link.springer.com/article/10.15252/emmm.202114123",
+        "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE166555"
+      ],
+      "original_data_only": true
+    },
+    {
+      "accession": "GSE178341",
+      "role": "Previously exposed development subset: 23 eligible patients",
+      "publication_doi": "10.1016/j.cell.2021.08.003",
+      "clinical_origin": "Primary treatment-naive colorectal cancer tissue collection at MGH and BWH",
+      "evidence_urls": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC8772395/",
+        "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE178341"
+      ]
+    }
+  ],
+  "independence_basis": "Distinct original recruitment studies and clinical centers; GSE166555 external integrated cohorts not used"
+}

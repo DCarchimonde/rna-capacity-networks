@@ -1,0 +1,29 @@
+{
+  "s": 0.0001,
+  "depth": 10000,
+  "cells_per_group": 3000,
+  "repetitions": 256,
+  "k": 500,
+  "permutations": 199,
+  "parity_generation_seed": 26101903,
+  "matched_generation_seed": 26101879,
+  "permutation_seed": 2610192100,
+  "order": [
+    "parity_alternative",
+    "parity_null",
+    "matched_alternative",
+    "matched_null"
+  ],
+  "statistics": [
+    "absolute group-mean D difference",
+    "absolute R difference; min after component means"
+  ],
+  "estimator": "conditional hypergeometric for both statistics",
+  "pvalue": "(1 + number of permuted statistics >= observed, including numerical ties)/200; reject <= .05",
+  "null": "identical cell-count distributions; exchangeable labels, not merely equality of R or D",
+  "zero_baseline": "if observed or permuted R undefined, count test as non-rejected and report frequency",
+  "pairing": "same counts and permutations for D and R within each replicate",
+  "category_partition": "Fixed integer labels from the original component lookup; recalculated values are checked and canonicalised within 64 machine epsilons of the component scale.",
+  "provenance": "original evaluation cohorts regenerated exactly; permutation draws newly fixed before inspecting results",
+  "scope": "descriptive crossed comparison, not a universal causal attribution of power to moment order"
+}

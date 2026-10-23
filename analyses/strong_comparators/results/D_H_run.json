@@ -1,0 +1,9 @@
+{
+  "cohort": "D",
+  "Epi_patients": 23,
+  "dual_patients": 23,
+  "cells": 58654,
+  "fits": 12972,
+  "seconds": 15.688368603999152,
+  "input_sha256": "15f16a17da11a8b4d3bbc403b15fffd9cc8a51ba2e79a789ed04620be501f044"
+}

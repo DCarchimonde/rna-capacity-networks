@@ -1,0 +1,34 @@
+{
+  "all_checks_passed": true,
+  "sampling_target": "Previously retained cells only; no claim about removed cells or unobserved absolute RNA.",
+  "occupancy_interpretation": "Conditional hypergeometric probability in the retained count sample. At least three graph molecules is necessary but not sufficient for a three-distinct-gene competition pattern; this is not a statistical power calculation.",
+  "native_comparison": "Raw native output; strict actual convergence in both halves; same eligible patients and pair denominator for both methods, reported per split. Selection changes the population, so full-cohort results remain in the prior tables.",
+  "ratio_bias_counterexamples_cell_local_limit": {
+    "positive": {
+      "population_ratio": "1/6",
+      "expected_one_cell_ratio": "3/10",
+      "bias": "2/15"
+    },
+    "negative": {
+      "population_ratio": "1/2",
+      "expected_one_cell_ratio": "1/10",
+      "bias": "-2/5"
+    }
+  },
+  "comb_500_500": 1,
+  "comb_501_500": 501,
+  "comb_510_500": 300177721418087592651,
+  "input_sha256": {
+    "D_H_scores.npz": "9e3044470ae379826ec82c4612fab3db322fbf6748921b3b780b833ceade5a9b",
+    "D_fit_status.csv.gz": "37779c8c72a7d6cc970c168694726326d3d7952c7a777bebcbc768a9024a40c5",
+    "H_simulation_paired_comparison.csv": "5eaa90d4d30af41d6d8c3bc598ecd7a99f2fef605ea34f7ea3bf5ff8654e87ee",
+    "I_H_scores.npz": "b90350a930f05f2a2546fc5e6c597efd1040cc6748c8b76ac9d0e01d537b58df",
+    "I_fit_status.csv.gz": "b70e0727998be8875c71f37b0495c4ccfc049bfa7d9570b5c52220b9ce47df09",
+    "R8_simulation_summary.csv": "175e72915b1b24215d3181dd75d6f8825c50336c3afe2ac780e02f0a6cf63faf",
+    "development_counts.npz": "15f16a17da11a8b4d3bbc403b15fffd9cc8a51ba2e79a789ed04620be501f044",
+    "independent_counts.npz": "25884937355803b84a282ac11510deeee6942726af8b357477d7c551c67a2ee3",
+    "patient_resolution_spectra.csv": "3bff4d5e0ce6aa936d8ae430cca94cf6f8f4633c45b770c72034189ea1fbc8d8",
+    "resolution_cohort_summary.csv": "0220444de08249bc2706047daa7984b8cbf98ec1de1631766afb7ef7af564701",
+    "resolution_transitions.csv": "0710ac5c3a66998196baec4c8e4e0acd51de00ee6622cc00e5a98820c5638aa2"
+  }
+}

@@ -1,0 +1,55 @@
+DATA SOURCES AND EXTRACTION
+
+GSE178341
+GEO: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE178341
+Source publication: https://doi.org/10.1016/j.cell.2021.08.003
+
+The complete 26-gene projection, all-feature depths, cell annotations and patient
+metadata are supplied under analyses/review_completion/inputs/:
+  atlas_integrins_all_cells.npz
+  atlas_joined_metadata.csv.gz
+  atlas_projection_provenance.json
+
+The 1,203,550,558-byte source HDF5 is available at:
+https://ftp.ncbi.nlm.nih.gov/geo/series/GSE178nnn/GSE178341/suppl/GSE178341_crc10x_full_c295v4_submit.h5
+SHA-256: f435bb2651ff5297d0c24a99daf58850ed67ae1ed6c5ef05fad48fa3f0186670
+
+To regenerate the projection, place that file at
+analyses/review_completion/inputs/GSE178341_full.h5, verify its digest, and run:
+    python analyses/review_completion/scripts/extract_atlas.py
+
+The extractor uses h5_stream.py for unusually large compressed source chunks.
+Allow approximately 15 GB extra disk space. Bundled metadata and integrin
+annotations are used. Depth is the sum of all 43,113 source feature rows.
+
+GSE166555
+GEO: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE166555
+Source publication: https://doi.org/10.15252/emmm.202114123
+
+The eligible projection is data/independent_counts.npz. The selection manifest,
+column mapping and source checksums are in analyses/independent_pair/:
+  config/selected_tumor_manifest.csv
+  config/metadata_columns.json
+  inputs/prepared/input_provenance.json
+  results/count_layer_audit.csv
+
+To rebuild it, obtain the selected GEO .tsv.gz matrices listed in the manifest,
+then run the following command on one line:
+    python analyses/independent_pair/scripts/prepare_counts.py prepare
+      --metadata analyses/independent_pair/inputs/analysis_metadata.tsv.gz
+      --manifest analyses/independent_pair/config/selected_tumor_manifest.csv
+      --column-map analyses/independent_pair/config/metadata_columns.json
+      --counts-dir /path/to/selected_geo_matrices
+      --out-dir /path/to/rebuilt_projection
+
+The all-gene depth audit is supplied. Missing ITGB3 remains unavailable, not
+an observed biological zero. Cross-cohort analyses use the common graph with
+that edge excluded.
+
+RIGHTS
+Public data remain subject to the source studies' terms. This archive asserts
+no additional rights over them. The unchanged CS-CORE source and its original
+MIT licence are in analyses/strong_comparators/vendor/. Its source URL, pinned
+commit and digest are recorded in the comparison specification and source audit.
+The analysis code and derived results accompany the manuscript for scientific
+inspection and reproduction.
